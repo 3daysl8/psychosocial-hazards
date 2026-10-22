@@ -59,6 +59,17 @@ The owner pointed to the SWA Health care and social assistance Code's psychosoci
 - **Licensing decision:** SWA Codes are CC BY-NC 4.0 and this guide's content is CC BY 4.0, so the guide writes in its own words and links to the source. Only short formal definitions are quoted. Added to `docs/content-rules.md`.
 - Content date 23 October 2026, version 0.1.1.
 
+### Second follow-up (2026-10-23): Victoria's own hazard list
+
+The owner added WorkSafe Victoria's Psychosocial hazard identification tool (Feb 2026) to `reference/`. With their permission it was read, along with WorkSafe's Regulations FAQ and Compliance Code page. Notes: `research/notes/worksafe-vic-psychological-health.md`.
+
+- **Victoria lists 16 hazards, not 14.** Job demands is split into high and low; harassment becomes sexual harassment plus a separate gendered violence hazard; several names differ (e.g. "Aggression or violence", "Poor workplace relationships", "Poor environmental conditions").
+- **Library restructured so each jurisdiction shows its own list.** Hazards can now be limited to some jurisdictions (`appliesTo`), override their name, summary, examples and definitions per jurisdiction (`overrides`), and point to the hazard that covers them elsewhere (`coveredBy`). Two Victoria-only hazards added: Low job demands and Gendered violence. Previous/next links follow the selected jurisdiction's list.
+- **Victorian definitions quoted** from the WorkSafe tool: bullying, sexual harassment, gendered violence, aggression or violence. Each quote names its own source.
+- **Closed TODO-VERIFYs:** Vic regulation commencement (1 Dec 2025), Compliance Code URL, Vic prevention plans (not mandatory, template encouraged).
+- **Source documents gitignored:** the SWA Code .docx had been committed by mistake. It's now in `research/papers/` and all PDFs/Word files are ignored except finished guides in `site/downloads/`.
+- Version 0.1.2. Useful material for later phases (Victoria's tailored control hierarchy, review triggers, HSR information access, internal records to review) is recorded in the notes file.
+
 ## How to test
 
 1. In VS Code, right-click `site/index.html` and choose "Open with Live Server".

@@ -187,6 +187,7 @@ main { padding-bottom: 3rem; min-height: 60vh; }
 }
 .callout-hr { background: var(--hr-soft); border-color: var(--hr); }
 .callout-hsr { background: var(--hsr-soft); border-color: var(--hsr); }
+.callout-note { background: var(--accent-soft); border-color: var(--accent); }
 .callout-label { font-weight: 700; margin-bottom: 0; }
 .callout-hr .callout-label { color: var(--hr); }
 .callout-hsr .callout-label { color: var(--hsr); }

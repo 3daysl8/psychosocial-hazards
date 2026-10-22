@@ -4,7 +4,7 @@ Status: draft, for owner review. Finished PDF built in Phase 9 into `site/downlo
 
 ## Purpose
 
-A one or two page card listing the 14 common psychosocial hazards, so HR and HSRs can recognise them quickly during a conversation, walk-through or meeting.
+A one or two page card listing the common psychosocial hazards (one version per jurisdiction: 14 for Model WHS, 16 for Victoria), so HR and HSRs can recognise them quickly during a conversation, walk-through or meeting.
 
 ## Content source (don't copy text here)
 

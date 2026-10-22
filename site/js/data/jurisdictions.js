@@ -11,7 +11,7 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.1.1',
+  version: '0.1.2',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
   currentAsAt: '2026-10-23',
@@ -61,7 +61,7 @@ export const site = {
 
   // The guide's sections, shown on the home page. Change status to 'available' as each is built.
   sections: [
-    { title: 'Hazard library', href: '#/hazards', status: 'available', summary: 'The 14 common psychosocial hazards, with examples and early warning signs.' },
+    { title: 'Hazard library', href: '#/hazards', status: 'available', summary: 'The common psychosocial hazards listed for your jurisdiction, with examples and early warning signs.' },
     { title: 'Something\'s happened', status: 'coming', summary: 'Immediate safety and support, the notifiable incident check, and which processes run side by side.' },
     { title: 'Understanding the risk', status: 'coming', summary: 'Gathering objective information, consulting workers and HSRs, and an indicative risk score.' },
     { title: 'Investigating systemic factors', status: 'coming', summary: 'What conditions allowed this harm to occur.' },
@@ -92,19 +92,28 @@ export const jurisdictions = {
         verify: 'TODO-VERIFY: link to the current authorised version — source: Victorian Legislation website',
       },
       {
+        // Commencement confirmed on WorkSafe's psychological health page, 2026-10-23.
         title: 'Occupational Health and Safety (Psychological Health) Regulations 2025 (Vic)',
         note: 'In force from 1 December 2025.',
-        verify: 'TODO-VERIFY: commencement date and link to the authorised version — source: Victorian Legislation website / WorkSafe Victoria',
+        verify: 'TODO-VERIFY: link to the authorised version — source: Victorian Legislation website',
       },
     ],
     guidance: [
       {
-        title: 'Compliance Code: Psychological health (Edition 1, September 2025)',
-        verify: 'TODO-VERIFY: edition and URL — source: WorkSafe Victoria',
+        title: 'Compliance Code: Psychological health (WorkSafe Victoria)',
+        url: 'https://www.worksafe.vic.gov.au/compliance-code-psychological-health',
+        note: 'Appendix B helps identify hazards. Appendix C describes 16 example hazards with sample risk controls.',
+        verify: 'TODO-VERIFY: edition number and date — source: Compliance Code PDF',
       },
       {
-        title: 'Prevention plan template',
-        verify: 'TODO-VERIFY: when a prevention plan is required and the template URL — source: WorkSafe Victoria / OHS (Psychological Health) Regulations 2025',
+        title: 'Psychological health hub, including the hazard identification tool and prevention plan template',
+        url: 'https://www.worksafe.vic.gov.au/psychological-health',
+        // Not mandatory: WorkSafe Regulations FAQ, checked 2026-10-23.
+        note: 'Prevention plans aren\'t mandatory in Victoria, but WorkSafe encourages employers to use its template.',
+      },
+      {
+        title: 'Psychological health regulations: frequently asked questions',
+        url: 'https://www.worksafe.vic.gov.au/psychological-health-regulations-frequently-asked-questions',
       },
     ],
     notes: [],

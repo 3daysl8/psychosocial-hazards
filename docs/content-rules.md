@@ -40,7 +40,7 @@ Extracted from `docs/brief.md`. Read before writing any user-facing content (sit
 
 ## Jurisdictions
 
-- Victoria: OHS Act 2004 and the OHS (Psychological Health) Regulations 2025 (in force from 1 December 2025, per brief; verify wording before publishing).
+- Victoria: OHS Act 2004 and the OHS (Psychological Health) Regulations 2025 (in force from 1 December 2025, confirmed by WorkSafe). Victoria lists 16 hazards, not the model Code's 14, and has its own control hierarchy. Use Victorian terms and lists when Victoria is selected; never assume model WHS wording applies.
 - Model WHS: harmonised states and territories. Note that Queensland requires written prevention plans (verify before publishing).
 - The selector swaps terminology (employer vs PCBU, OHS vs WHS), regulator names and links. All of it lives in a data file.
 

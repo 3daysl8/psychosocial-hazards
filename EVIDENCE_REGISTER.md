@@ -49,7 +49,13 @@ Source of the 14 common psychosocial hazards (section 3.1, p. 16). Hazard names 
 **Safe Work Australia.** Model Code of Practice: Health care and social assistance industry, psychosocial hazards chapter. https://www.safeworkaustralia.gov.au/book/health-care-and-social-assistance/hazards-risks-and-controls/psychosocial-hazards
 Industry-specific. Groups hazards into 6 broad types. Useful for: the matters to consider when choosing controls, why EAP alone doesn't meet the duty, short- vs long-term controls, words workers use to describe hazards, and case studies. Notes: `research/notes/swa-psychosocial-codes.md`. Status: VERIFIED (content read 2026-10-23). Licence of web page TO-CHECK.
 
-**WorkSafe Victoria (2025).** Compliance Code: Psychological health (Edition 1, September 2025), supporting the Occupational Health and Safety (Psychological Health) Regulations 2025, commenced 1 December 2025. Prevention plan template available from WorkSafe Victoria. Status: TO-CHECK (URL).
+**WorkSafe Victoria (2025).** Compliance Code: Psychological health, supporting the Occupational Health and Safety (Psychological Health) Regulations 2025. https://www.worksafe.vic.gov.au/compliance-code-psychological-health
+Appendix B: identifying hazards. Appendix C: 16 example hazards with sample controls. Regulations commencement (1 December 2025) confirmed on WorkSafe's psychological health page. Status: VERIFIED (URL, commencement, 16-hazard count). TO-CHECK: edition number and date; hazard names against the Code itself.
+
+**WorkSafe Victoria (2026).** Psychosocial hazard identification tool (WSV4056/01/01.26). Aligns with Compliance Code Appendix B. Source of the Victorian hazard names and the quoted Victorian definitions in `site/js/data/hazards.js`. Step 1 lists internal records to review (leave, incidents, hours, claims, complaints, turnover, EAP, grievances, productivity, surveys). Notes: `research/notes/worksafe-vic-psychological-health.md`. Status: VERIFIED (read 2026-10-23). Public URL TO-CHECK.
+
+**WorkSafe Victoria.** Psychological health regulations FAQ. https://www.worksafe.vic.gov.au/psychological-health-regulations-frequently-asked-questions
+Victoria's tailored control hierarchy (information, instruction or training can't be the main control), review triggers, consultation and HSR information access, prevention plans not mandatory, workers compensation unaffected. Status: VERIFIED (read 2026-10-23); check against the Regulations before stating section numbers.
 
 **ISO 45003:2021.** Occupational health and safety management: psychological health and safety at work, guidelines for managing psychosocial risks. Status: TO-CHECK.
 
