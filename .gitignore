@@ -10,6 +10,12 @@ desktop.ini
 research/papers/*
 !research/papers/.gitkeep
 
+# Source documents anywhere (Codes, regulator PDFs, papers). Only finished guides in site/downloads/ are committed.
+*.pdf
+*.docx
+*.doc
+!site/downloads/**/*.pdf
+
 # Personal Claude Code settings (shared settings.json is committed)
 .claude/settings.local.json
 
