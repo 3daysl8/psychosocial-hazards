@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Personal editor settings
+.vscode/
+
+# Research papers (copyrighted, never published or committed)
+research/papers/*
+!research/papers/.gitkeep
+
+# Personal Claude Code settings (shared settings.json is committed)
+.claude/settings.local.json
+
+# Netlify CLI local state
+.netlify/
+
+# Scratch and temp files
+scratch/
+*.tmp
+*.bak
+*~

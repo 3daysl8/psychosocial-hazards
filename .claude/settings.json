@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./research/papers/**)",
+      "Read(./site/downloads/**)",
+      "Read(./reference/**)"
+    ]
+  }
+}

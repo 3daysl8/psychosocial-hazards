@@ -1,0 +1,18 @@
+# Netlify config. Lives in the repo so anyone who forks gets the same setup.
+# No build step: Netlify publishes the site/ folder as-is.
+
+[build]
+  publish = "site"
+  command = ""
+
+# Security headers for every page.
+# CSP allows only files served from this site: no external scripts, styles, fonts, embeds or trackers.
+# If embedded video is ever added, allow only that one domain in frame-src (see docs/content-rules.md).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"

@@ -1,0 +1,38 @@
+/* Placeholder styles for Phase 0. Replaced with the real design system in Phase 1. */
+
+:root {
+  --bg: #fbfaf7;
+  --text: #1f2328;
+  --muted: #57606a;
+  --rule: #d8d4cc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 { line-height: 1.2; }
+
+.lede { font-size: 1.15rem; }
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media print {
+  body { background: #fff; }
+}
