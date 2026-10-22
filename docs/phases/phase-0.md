@@ -37,3 +37,32 @@ None in code. `docs/content-rules.md` notes that the Victorian regulation commen
 1. Open `C:\dev\psychological-hazards` in VS Code and check the tree matches the brief.
 2. Right-click `site/index.html` and choose "Open with Live Server". The placeholder page should show a title, a short "in development" note, the disclaimer and a current-as-at line.
 3. Open the browser dev tools console: no errors.
+
+## 0b: pipeline (2026-10-22)
+
+### Goal
+Get the placeholder from local folder to GitHub to a live Netlify site before any real building starts.
+
+### What was built
+- Tools checked: git 2.54, GitHub CLI 2.96 (logged in), Netlify CLI 26.1 (logged in). VS Code Live Server not detected; owner to install.
+- `git init -b main`, git identity set for this repo only, using the GitHub noreply email so no personal email is published in commits.
+- `.gitattributes` added to store text files with LF line endings.
+- Public repo created with `gh repo create`: https://github.com/3daysl8/psychosocial-hazards
+- Netlify site `psychosocialhazards` created via the Netlify CLI API and linked to the repo through the existing Netlify GitHub app: https://psychosocialhazards.netlify.app
+- README updated with live and repo URLs.
+
+### Decisions and why
+- **Repo named `psychosocial-hazards`**, not the folder name, because "psychosocial hazards" is the collective name of the reforms and legislation. The local folder stays `psychological-hazards`; git doesn't care.
+- **Netlify connected by CLI instead of the dashboard**, at the owner's request. Same result: build settings come from `netlify.toml`, pushes to `main` deploy automatically.
+- **Noreply commit email** keeps the owner's address out of a public history.
+
+### Deferred
+- Installing VS Code Live Server (owner).
+
+### TODO-VERIFY added
+None.
+
+### How to test
+1. Visit https://psychosocialhazards.netlify.app. The placeholder page loads.
+2. In dev tools, Network tab, click the page request: response headers include `Content-Security-Policy`, `X-Frame-Options: DENY`, `Referrer-Policy: no-referrer`, `X-Content-Type-Options: nosniff`.
+3. Push any commit to `main` and watch a new deploy appear in the Netlify dashboard.

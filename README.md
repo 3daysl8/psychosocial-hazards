@@ -6,7 +6,10 @@ It's a guide, not legal advice. Nothing you type is stored or sent anywhere: eve
 
 Part of the same family as the [Psychological Risk Model](https://psychologicalriskmetre.netlify.app/).
 
-**Status:** in development (Phase 0). See [BUILD_LOG.md](BUILD_LOG.md).
+- **Live site:** https://psychosocialhazards.netlify.app
+- **Repo:** https://github.com/3daysl8/psychosocial-hazards
+
+**Status:** in development (Phase 0 complete). See [BUILD_LOG.md](BUILD_LOG.md).
 
 ## Run it locally
 
@@ -18,7 +21,7 @@ No install, no build step.
 
 ## Deploy
 
-Netlify publishes the `site/` folder on every push to `main`. Settings are in `netlify.toml`. Live URL and repo URL to be added once set up.
+Netlify publishes the `site/` folder on every push to `main`. Settings (publish folder, empty build command, security headers) are in `netlify.toml`, so a fork connected to Netlify gets the same setup with no dashboard changes.
 
 ## Reuse it
 

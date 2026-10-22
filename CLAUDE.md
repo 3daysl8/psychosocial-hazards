@@ -2,9 +2,10 @@
 
 Browser-only web guide for Australian HR practitioners and Health and Safety Representatives (HSRs). Walks them through identifying, investigating and controlling psychosocial hazards after an incident or report, gives an indicative risk score, and teaches the concepts along the way. Sister tool to the Psychological Risk Model (https://psychologicalriskmetre.netlify.app/). Plain HTML/CSS/JS, public GitHub repo, Netlify deploys `site/` only. Owner is not a professional developer: explain non-obvious things briefly, keep code simple.
 
-## Current phase: 0
+## Current phase: 0 complete, next is 1
 
-Phase 0a (scaffold) done. Next: 0b (pipeline: tools check, git init, GitHub repo, Netlify). Licence already chosen: MIT code + CC BY 4.0 content.
+Phase 0 (scaffold + pipeline) done. Next: Phase 1 (jurisdiction selector, disclaimer/date system, hazard library). Licence: MIT code + CC BY 4.0 content.
+Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl8/psychosocial-hazards (local folder name differs, that's fine). Push to `main` auto-deploys.
 
 ## Folder map
 
