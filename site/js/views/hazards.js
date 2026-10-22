@@ -18,6 +18,12 @@ function matchesFilters(hazard, ctx) {
   return words.every(word => searchable.includes(word));
 }
 
+function sourceLine() {
+  return el('p', { class: 'source-line' },
+    'Hazard names from the ', externalLink(hazardLibrary.source.url, hazardLibrary.source.title),
+    '. Descriptions are our own plain-English summaries.');
+}
+
 function hazardCard(hazard, ctx) {
   return el('li', {},
     el('article', { class: 'hazard-card' },
@@ -55,6 +61,7 @@ export function hazardListView(ctx) {
   const node = el('div', { class: 'hazard-library' },
     el('h1', {}, hazardLibrary.title),
     hazardLibrary.intro.map(paragraph => el('p', {}, ctx.fill(paragraph))),
+    sourceLine(),
     verifyNote(hazardLibrary.introVerify, ctx),
     el('div', { class: 'filters', role: 'search' },
       el('div', { class: 'field' }, el('label', { for: 'hazard-search' }, 'Search hazards'), search),
@@ -85,6 +92,10 @@ export function hazardDetailView(ctx, id) {
 
     el('h2', {}, 'What it is'),
     el('p', {}, ctx.fill(hazard.summary)),
+    (hazard.definitions || []).map(definition => el('figure', { class: 'definition' },
+      el('blockquote', { cite: hazardLibrary.source.url },
+        el('p', {}, el('strong', {}, `${definition.term}: `), '“', definition.text, '”')),
+      el('figcaption', {}, 'Quoted from the ', externalLink(hazardLibrary.source.url, hazardLibrary.source.title)))),
     verifyNote(hazard.definitionVerify, ctx),
 
     el('h2', {}, 'What it can look like'),
@@ -96,6 +107,7 @@ export function hazardDetailView(ctx, id) {
     roleCallouts(hazard.callouts, ctx),
 
     el('aside', { class: 'combine-note' }, el('p', {}, ctx.fill(hazardLibrary.combineNote))),
+    sourceLine(),
     verifyNote(hazardSourceVerify, ctx),
 
     el('nav', { class: 'pager', 'aria-label': 'Other hazards' },

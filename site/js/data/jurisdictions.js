@@ -11,10 +11,10 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.1.0',
+  version: '0.1.1',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
-  currentAsAt: '2026-10-22',
+  currentAsAt: '2026-10-23',
 
   disclaimer:
     'This guide is for education and to support good practice. It is not legal advice and does not determine legal outcomes. ' +
@@ -140,8 +140,15 @@ export const jurisdictions = {
     ],
     guidance: [
       {
-        title: 'Model Code of Practice: Managing psychosocial hazards at work (Safe Work Australia, 2022)',
-        verify: 'TODO-VERIFY: current edition, URL, and which jurisdictions have approved it — source: Safe Work Australia',
+        title: 'Model Code of Practice: Managing psychosocial hazards at work (Safe Work Australia, July 2022)',
+        url: 'https://www.safeworkaustralia.gov.au/doc/model-code-practice-managing-psychosocial-hazards-work',
+        note: 'Has legal effect only where a jurisdiction has approved it. Check with your regulator.',
+        verify: 'TODO-VERIFY: which jurisdictions have approved it — source: each WHS regulator',
+      },
+      {
+        title: 'Model Code of Practice: Health care and social assistance industry (Safe Work Australia), psychosocial hazards chapter',
+        url: 'https://www.safeworkaustralia.gov.au/book/health-care-and-social-assistance/hazards-risks-and-controls/psychosocial-hazards',
+        note: 'Industry examples and controls for health care and social assistance workplaces.',
       },
       { title: 'Safe Work Australia', url: 'https://www.safeworkaustralia.gov.au/', note: 'National policy body. It develops the model laws but does not enforce them.' },
     ],

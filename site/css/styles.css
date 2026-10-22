@@ -160,6 +160,14 @@ main { padding-bottom: 3rem; min-height: 60vh; }
   background: var(--verify-soft); border-radius: 99px; padding: 0.1rem 0.7rem; margin: 0.75rem 0 0;
 }
 
+.definition { margin: 1.25rem 0; }
+.definition blockquote {
+  margin: 0; padding: 0.1rem 1.1rem; background: var(--surface);
+  border-left: 4px solid var(--rule); border-radius: 0 var(--radius) var(--radius) 0;
+}
+.definition figcaption, .source-line { font-size: 0.9rem; color: var(--muted); }
+.definition figcaption { margin-top: 0.35rem; }
+
 .combine-note {
   margin-top: 2rem; background: var(--surface); border: 1px solid var(--rule);
   border-radius: var(--radius); padding: 0.25rem 1.1rem;

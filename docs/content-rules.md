@@ -17,6 +17,12 @@ Extracted from `docs/brief.md`. Read before writing any user-facing content (sit
 - The notifiable incident check links to the regulator's definition. Don't paraphrase it. Psychological injury rarely meets the notifiable incident threshold.
 - "Reasonable management action" is a workers compensation and Fair Work concept, not a WHS/OHS duty. It must not appear in hazard assessment, scoring or the investigation flow. If it appears at all, it goes in a separate, clearly labelled "related processes" section.
 
+## Using source material (licensing)
+
+- Safe Work Australia's Codes of Practice are CC BY-NC 4.0. This guide's content is CC BY 4.0. So: **write in our own plain English and link to the source. Don't copy or closely adapt SWA wording.**
+- Short formal definitions (e.g. bullying, sexual harassment) may be quoted word for word, in quotation marks, with the source named. Quote rather than paraphrase where the wording carries legal weight.
+- Check the licence of any other regulator material before reusing its wording.
+
 ## Research and evidence
 
 - Every scored factor, weight and regulatory claim traces to a row in `EVIDENCE_REGISTER.md`.

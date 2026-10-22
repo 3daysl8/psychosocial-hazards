@@ -46,6 +46,19 @@ All in `site/js/data/`:
 - `jurisdictions.js`: Vic OHS Act link; Vic Psychological Health Regulations 2025 commencement date and link; Vic Compliance Code edition and URL; Vic prevention plan requirement and template URL; Model WHS regulator names, adopting jurisdictions (including WA) and links; model WHS Regulations covering psychosocial risk; Model Code of Practice edition, URL and approvals; Queensland prevention plan requirement.
 - `hazards.js`: definition of psychosocial hazard and whether the Vic Compliance Code uses the same list and names; hazard names and descriptions for all 14 hazards; definition of bullying; definitions of harassment and sexual harassment; consultation duty on proposed changes; positive duty on sexual harassment.
 
+## Follow-up (2026-10-23): checked against Safe Work Australia
+
+The owner pointed to the SWA Health care and social assistance Code's psychosocial page as a primary source. That page is industry-specific and groups hazards into 6 types; it links to the general Model Code of Practice: Managing psychosocial hazards at work (July 2022), which is the source of the 14 hazards. Both were read and summarised in `research/notes/swa-psychosocial-codes.md`.
+
+- All 14 hazard names matched the Model Code exactly. Those TODO-VERIFY items now only cover Victoria.
+- Bullying summary fixed: it had left out "unreasonable". Bullying and sexual harassment definitions now quoted word for word with attribution, shown in a styled quote block.
+- Harassment summary now says single instances of harmful behaviour can still be a hazard. Job demands summary mentions high stakes if mistakes happen and idle periods.
+- Library intro rewritten to follow the Code's definition (in our own words). Source line added to the library and every hazard page.
+- Model WHS guidance on the Law page now links the Model Code and the health care industry Code.
+- Both Codes added to `EVIDENCE_REGISTER.md` as VERIFIED.
+- **Licensing decision:** SWA Codes are CC BY-NC 4.0 and this guide's content is CC BY 4.0, so the guide writes in its own words and links to the source. Only short formal definitions are quoted. Added to `docs/content-rules.md`.
+- Content date 23 October 2026, version 0.1.1.
+
 ## How to test
 
 1. In VS Code, right-click `site/index.html` and choose "Open with Live Server".

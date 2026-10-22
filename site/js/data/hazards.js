@@ -11,17 +11,25 @@
 //   examples      workplace examples
 //   warningSigns  early warning signs at team or workplace level
 //   callouts      optional role notes: { hr: { text, verify }, hsr: { text, verify } }
-//   definitionVerify  set where the hazard has a formal definition that must be checked, not paraphrased
-//   tags          topic tags, used later to link education content (Phase 8) and evidence (Phase 4)
+//   definitions   optional formal definitions quoted word for word: [{ term, text }]. Quoted from
+//                 hazardLibrary.source, so they always show with that attribution.
+//   definitionVerify  set where a formal definition still needs checking
+//   tags         topic tags, used later to link education content (Phase 8) and evidence (Phase 4)
 //   reviewStatus  'draft' until the owner has checked it, then 'reviewed'
 
 export const hazardLibrary = {
   title: 'Hazard library',
   intro: [
-    'Psychosocial hazards are aspects of the work, the way it is designed and managed, the work environment and workplace interactions that can cause psychological or physical harm.',
-    'The {lawShort} framework lists 14 common psychosocial hazards. Use this library to recognise them, see what they can look like in a workplace, and spot early warning signs.',
+    'Psychosocial hazards come from how work is designed and managed, the work environment, equipment, and how people interact at work. They can cause psychological harm, such as anxiety, depression or post-traumatic stress, and physical harm too.',
+    'Safe Work Australia\'s model Code of Practice lists 14 common psychosocial hazards. The list isn\'t exhaustive, and most people are exposed to several at once. Use this library to recognise them, see what they can look like in a workplace, and spot early warning signs.',
   ],
-  introVerify: 'TODO-VERIFY: definition of psychosocial hazard, and whether the Victorian Compliance Code uses the same list and names as the Safe Work Australia Code — source: Model Code of Practice: Managing psychosocial hazards at work; Compliance Code: Psychological health (Vic)',
+  // Names and the 14-hazard list checked against the Model Code, section 3.1, on 2026-10-23.
+  // See research/notes/swa-psychosocial-codes.md and EVIDENCE_REGISTER.md.
+  source: {
+    title: 'Model Code of Practice: Managing psychosocial hazards at work (Safe Work Australia, July 2022)',
+    url: 'https://www.safeworkaustralia.gov.au/doc/model-code-practice-managing-psychosocial-hazards-work',
+  },
+  introVerify: 'TODO-VERIFY: whether the Victorian Compliance Code defines psychosocial hazards the same way and uses the same 14 names — source: Compliance Code: Psychological health (Vic)',
   combineNote:
     'Hazards rarely occur on their own. When several are present at once, or exposure is frequent, long-lasting or severe, the risk of harm increases. ' +
     'Look at the whole picture, not just the hazard that prompted the report.',
@@ -41,7 +49,7 @@ export const hazards = [
     id: 'job-demands',
     name: 'Job demands',
     category: 'job',
-    summary: 'Sustained high, or very low, physical, mental or emotional effort needed to do the job. Covers workload, time pressure, long or irregular hours, emotionally demanding work, and work that is monotonous or understimulating.',
+    summary: 'Sustained high, or very low, physical, mental or emotional effort needed to do the job. Covers workload, time pressure, long or irregular hours, emotionally demanding work, high stakes if mistakes happen, and work that is monotonous or leaves people idle while work piles up.',
     examples: [
       'Workloads that can\'t be finished in paid hours, so unpaid overtime is routine.',
       'Frontline roles dealing with distressed or difficult people day after day.',
@@ -252,8 +260,11 @@ export const hazards = [
     id: 'bullying',
     name: 'Bullying',
     category: 'behaviour',
-    summary: 'Repeated behaviour directed at a worker or group of workers that creates a risk to health and safety.',
-    definitionVerify: 'TODO-VERIFY: definition of workplace bullying — source: Model Code of Practice: Managing psychosocial hazards at work / Compliance Code: Psychological health (Vic)',
+    summary: 'Repeated, unreasonable behaviour aimed at a worker or a group of workers that creates a risk to their health and safety. It can come from anyone at work: other workers, managers, clients, patients or visitors.',
+    definitions: [
+      { term: 'Bullying', text: 'Repeated unreasonable behaviour directed towards a worker or group of workers that creates a risk to health and safety.' },
+    ],
+    definitionVerify: 'TODO-VERIFY: whether the Victorian Compliance Code defines bullying the same way — source: Compliance Code: Psychological health (Vic)',
     examples: [
       'Repeated belittling or humiliating comments.',
       'Deliberately leaving someone out of work activities or information.',
@@ -279,8 +290,11 @@ export const hazards = [
     id: 'harassment',
     name: 'Harassment including sexual harassment',
     category: 'behaviour',
-    summary: 'Unwelcome behaviour that offends, humiliates or intimidates a person, including sexual harassment and harassment based on personal characteristics such as race, sex, age or disability.',
-    definitionVerify: 'TODO-VERIFY: definitions of harassment and sexual harassment — source: Model Code of Practice: Managing psychosocial hazards at work / Compliance Code: Psychological health (Vic) / Sex Discrimination Act 1984 (Cth)',
+    summary: 'Unwelcome behaviour that offends, humiliates or intimidates someone. This includes sexual harassment, and harassment because of personal characteristics such as age, disability, race, religion, sex, sexual orientation or gender identity. Harmful behaviour that happens only once, and so isn\'t bullying, can still be a hazard.',
+    definitions: [
+      { term: 'Sexual harassment', text: 'any unwelcome sexual advance, unwelcome request for sexual favours or other unwelcome conduct of a sexual nature, in circumstances where a reasonable person, having regard to all the circumstances, would anticipate the possibility that the person harassed would be offended, humiliated or intimidated.' },
+    ],
+    definitionVerify: 'TODO-VERIFY: whether the Victorian Compliance Code defines harassment the same way, and the matching definition in the Sex Discrimination Act 1984 (Cth) — source: Compliance Code: Psychological health (Vic); Sex Discrimination Act 1984 (Cth)',
     examples: [
       'Unwelcome comments about someone\'s appearance or private life.',
       'Sexual jokes, images or messages.',
@@ -320,5 +334,5 @@ export const hazards = [
   },
 ];
 
-// Every hazard is checked against the Code of Practice before reviewStatus becomes 'reviewed'.
-export const hazardSourceVerify = 'TODO-VERIFY: hazard name and description match the source — source: Model Code of Practice: Managing psychosocial hazards at work (Safe Work Australia) / Compliance Code: Psychological health (Vic)';
+// Names match the Model Code (checked 2026-10-23). Victoria still to check.
+export const hazardSourceVerify = 'TODO-VERIFY: whether the Victorian Compliance Code uses this hazard name and a matching description — source: Compliance Code: Psychological health (Vic)';

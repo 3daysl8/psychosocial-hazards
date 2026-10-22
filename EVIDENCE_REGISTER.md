@@ -43,7 +43,11 @@ Covers reviews published 2000–2020. High-quality reviews support associations 
 
 ## Regulatory and standards guidance
 
-**Safe Work Australia (2022).** Model Code of Practice: Managing psychosocial hazards at work. Source of the 14 common psychosocial hazards. Status: TO-CHECK (confirm current edition and URL).
+**Safe Work Australia (2022).** Model Code of Practice: Managing psychosocial hazards at work. July 2022. ISBN 978-1-76114-138-6 (PDF). https://www.safeworkaustralia.gov.au/doc/model-code-practice-managing-psychosocial-hazards-work
+Source of the 14 common psychosocial hazards (section 3.1, p. 16). Hazard names in `site/js/data/hazards.js` checked against it 2026-10-23. Licensed CC BY-NC 4.0, so the site paraphrases in its own words and quotes only short definitions with attribution. Notes: `research/notes/swa-psychosocial-codes.md`. Status: VERIFIED (edition, URL, hazard list). Still TO-CHECK: which jurisdictions have approved it.
+
+**Safe Work Australia.** Model Code of Practice: Health care and social assistance industry, psychosocial hazards chapter. https://www.safeworkaustralia.gov.au/book/health-care-and-social-assistance/hazards-risks-and-controls/psychosocial-hazards
+Industry-specific. Groups hazards into 6 broad types. Useful for: the matters to consider when choosing controls, why EAP alone doesn't meet the duty, short- vs long-term controls, words workers use to describe hazards, and case studies. Notes: `research/notes/swa-psychosocial-codes.md`. Status: VERIFIED (content read 2026-10-23). Licence of web page TO-CHECK.
 
 **WorkSafe Victoria (2025).** Compliance Code: Psychological health (Edition 1, September 2025), supporting the Occupational Health and Safety (Psychological Health) Regulations 2025, commenced 1 December 2025. Prevention plan template available from WorkSafe Victoria. Status: TO-CHECK (URL).
 
