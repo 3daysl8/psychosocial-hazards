@@ -1,38 +1,223 @@
-/* Placeholder styles for Phase 0. Replaced with the real design system in Phase 1. */
+/* Psychosocial Hazard Investigation Guide styles.
+   Colours and spacing are tokens at the top; change them here, not in individual rules.
+   All text/background pairs meet WCAG AA contrast. */
 
 :root {
   --bg: #fbfaf7;
-  --text: #1f2328;
-  --muted: #57606a;
-  --rule: #d8d4cc;
+  --surface: #ffffff;
+  --text: #1d2327;
+  --muted: #545d66;
+  --rule: #ddd8cf;
+  --accent: #0e5c58;          /* links, focus, current nav */
+  --accent-soft: #e3efed;
+  --hr: #8a4b0f;              /* HR callout */
+  --hr-soft: #fbf1e6;
+  --hsr: #1f4e8c;             /* HSR callout */
+  --hsr-soft: #e9f0fa;
+  --verify: #6b4f00;
+  --verify-soft: #fff7d6;
+  --radius: 6px;
+  --space: 1rem;
+  --measure: 46rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font);
+  font-size: 1.0625rem;
   line-height: 1.6;
 }
 
 .wrap {
-  max-width: 40rem;
+  max-width: var(--measure);
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding-left: var(--space);
+  padding-right: var(--space);
 }
 
-h1 { line-height: 1.2; }
+h1, h2, h3 { line-height: 1.25; margin: 1.6em 0 0.5em; }
+h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); margin-top: 1.2em; letter-spacing: -0.01em; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.1rem; }
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+main:focus, h1:focus { outline: none; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: 0.5rem; top: -3rem;
+  background: var(--accent); color: #fff; padding: 0.5rem 0.75rem; border-radius: var(--radius);
+  z-index: 10;
+}
+.skip-link:focus { top: 0.5rem; }
+
+/* Header */
+
+.site-header { background: var(--surface); border-bottom: 1px solid var(--rule); }
+
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.75rem 1.5rem; padding-top: 0.9rem; padding-bottom: 0.6rem;
+}
+
+.brand { font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.05rem; }
+
+.jurisdiction-picker { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; min-width: 0; max-width: 100%; }
+.jurisdiction-picker select { flex: 1 1 auto; min-width: 0; }
+.jurisdiction-picker label { color: var(--muted); }
+
+select, input[type="search"] {
+  font: inherit; color: var(--text); background: var(--surface);
+  border: 1px solid #8c959f; border-radius: var(--radius); padding: 0.4rem 0.6rem;
+  max-width: 100%;
+}
+
+.nav-list {
+  list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem;
+  padding-top: 0.25rem; padding-bottom: 0.6rem;
+}
+.nav-list a { text-decoration: none; color: var(--muted); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+.nav-list a:hover { color: var(--text); }
+.nav-list a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+
+main { padding-bottom: 3rem; min-height: 60vh; }
 
 .lede { font-size: 1.15rem; }
 
-.site-footer {
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 0.9rem;
+/* Home */
+
+.privacy-note {
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem; border-radius: 0 var(--radius) var(--radius) 0;
 }
 
+.role-grid { display: grid; gap: var(--space); grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.role-card {
+  background: var(--surface); border: 1px solid var(--rule); border-top: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 0.25rem 1.1rem 0.5rem;
+}
+.role-card h3 { margin-top: 0.9em; }
+.role-hr { border-top-color: var(--hr); }
+.role-hsr { border-top-color: var(--hsr); }
+
+.section-list { padding-left: 1.25rem; }
+.section-item { margin-bottom: 0.6rem; }
+.section-item p { margin: 0.1rem 0 0; color: var(--muted); }
+.section-item a, .section-title { font-weight: 600; }
+.status-coming .section-title { color: var(--muted); }
+.status-tag {
+  display: inline-block; margin-left: 0.5rem; font-size: 0.8rem; padding: 0 0.45rem;
+  border: 1px solid var(--rule); border-radius: 99px; color: var(--muted);
+}
+
+.family-note { margin-top: 2rem; color: var(--muted); }
+
+/* Hazard library */
+
+.filters { display: flex; flex-wrap: wrap; gap: var(--space); margin: 1.5rem 0 0.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.25rem; flex: 1 1 14rem; min-width: 0; }
+.field select, .field input { width: 100%; }
+.field label { font-weight: 600; font-size: 0.95rem; }
+
+.result-count { color: var(--muted); font-size: 0.95rem; }
+
+.hazard-grid {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: var(--space); grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+}
+.hazard-card {
+  height: 100%; background: var(--surface); border: 1px solid var(--rule);
+  border-radius: var(--radius); padding: 0.9rem 1.1rem;
+}
+.hazard-card h2 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+.hazard-card p { margin: 0.4rem 0 0; }
+
+.category-tag { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+
+.hazard-detail h1 { margin-bottom: 0.25rem; }
+.breadcrumb { margin: 1.25rem 0 0; font-size: 0.95rem; }
+
+.draft-badge {
+  display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--verify);
+  background: var(--verify-soft); border-radius: 99px; padding: 0.1rem 0.7rem; margin: 0.75rem 0 0;
+}
+
+.combine-note {
+  margin-top: 2rem; background: var(--surface); border: 1px solid var(--rule);
+  border-radius: var(--radius); padding: 0.25rem 1.1rem;
+}
+
+.pager {
+  display: flex; justify-content: space-between; gap: var(--space); flex-wrap: wrap;
+  margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+}
+.pager-next { margin-left: auto; text-align: right; }
+
+/* Callouts and notes */
+
+.callout {
+  margin: 1.5rem 0; padding: 0.25rem 1.1rem; border-left: 4px solid;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.callout-hr { background: var(--hr-soft); border-color: var(--hr); }
+.callout-hsr { background: var(--hsr-soft); border-color: var(--hsr); }
+.callout-label { font-weight: 700; margin-bottom: 0; }
+.callout-hr .callout-label { color: var(--hr); }
+.callout-hsr .callout-label { color: var(--hsr); }
+
+.verify-note {
+  font-size: 0.85rem; color: var(--verify); background: var(--verify-soft);
+  border: 1px dashed #c9a227; border-radius: var(--radius); padding: 0.35rem 0.6rem;
+}
+
+/* Law page */
+
+.terms { display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1.25rem; }
+.terms dt { font-weight: 600; }
+.terms dd { margin: 0; }
+@media (max-width: 30rem) {
+  .terms { grid-template-columns: 1fr; }
+  .terms dd { margin-bottom: 0.5rem; }
+}
+
+.source-list { padding-left: 1.25rem; }
+.source-list li { margin-bottom: 0.6rem; }
+.item-note { color: var(--muted); }
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--rule); background: var(--surface);
+  color: var(--muted); font-size: 0.9rem; padding: 1rem 0 1.5rem;
+}
+.footer-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+
+/* Print: content, disclaimer and date only */
+
 @media print {
-  body { background: #fff; }
+  body { background: #fff; font-size: 11pt; }
+  .skip-link, .site-nav, .jurisdiction-picker, .filters, .pager, .breadcrumb, .footer-links { display: none !important; }
+  .site-header, .site-footer { border: 0; background: none; }
+  .wrap { max-width: none; padding: 0; }
+  .hazard-card, .role-card, .combine-note, .callout { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  .verify-note { border-style: solid; }
 }
