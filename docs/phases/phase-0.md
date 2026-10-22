@@ -55,6 +55,7 @@ Get the placeholder from local folder to GitHub to a live Netlify site before an
 - **Repo named `psychosocial-hazards`**, not the folder name, because "psychosocial hazards" is the collective name of the reforms and legislation. The local folder stays `psychological-hazards`; git doesn't care.
 - **Netlify connected by CLI instead of the dashboard**, at the owner's request. Same result: build settings come from `netlify.toml`, pushes to `main` deploy automatically.
 - **Noreply commit email** keeps the owner's address out of a public history.
+- **Build hook + GitHub webhook for auto-deploy.** The site deployed on creation, but a later push to `main` didn't trigger a build (the Netlify GitHub app most likely only has access to selected repos). Fix: a Netlify build hook ("GitHub push", branch `main`) plus a GitHub repo webhook on `push` that calls it. If the GitHub app is later given access to this repo, delete the webhook (repo Settings → Webhooks) to avoid double builds.
 
 ### Deferred
 - Installing VS Code Live Server (owner).
