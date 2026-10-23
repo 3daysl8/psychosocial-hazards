@@ -4,7 +4,7 @@ Browser-only web guide for Australian HR practitioners and Health and Safety Rep
 
 ## Current phase: 4 complete, awaiting owner review before 5
 
-Phase 4 evidence audit done (`docs/phases/phase-4.md`, `EVIDENCE_REGISTER.md`). Phase 5 (score) waits for the owner's answers to the four decisions in the Phase 4 report. Risk Model source: `reference/risk-model/` (read only). Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
+**New session? Read `docs/HANDOVER.md` first.** Phases 2 to 4 are committed and tagged locally but NOT pushed (owner to test first). Phase 5 waits for the four decisions in `docs/phases/phase-4.md` and the Gemini research report. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
 Guided pages are data files rendered by `js/views/flow.js`; answers live in memory only (`js/lib/state.js`).
 Site structure: `js/app.js` router + shell, `js/views/` one file per page, `js/lib/` helpers, `js/data/` all wording. Use `{dutyHolder}`-style placeholders for jurisdiction terms.
 Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl8/psychosocial-hazards (local folder name differs, that's fine). Push to `main` auto-deploys.
