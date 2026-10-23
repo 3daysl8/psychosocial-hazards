@@ -11,7 +11,7 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.1.2',
+  version: '0.2.0',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
   currentAsAt: '2026-10-23',
@@ -20,6 +20,9 @@ export const site = {
     'This guide is for education and to support good practice. It is not legal advice and does not determine legal outcomes. ' +
     'Any risk score it shows is indicative only, has face validity only, and must not be used on its own to make employment or clinical decisions about an individual. ' +
     'Always check the current law and your regulator\'s guidance.',
+
+  // Shown in the bar at the very top of every page.
+  independenceNote: 'Independent guide. Not a government website.',
 
   privacy: 'Nothing you type into this guide is stored or sent anywhere. It all stays in your browser and is gone when you close the page.',
 

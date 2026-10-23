@@ -1,5 +1,6 @@
 # site/ (published by Netlify)
 
+- Design system: "Civic". Read `docs/design.md` before adding UI; reuse its components.
 - Plain HTML, CSS, vanilla JS. No framework, no build step, no npm. Must work via VS Code Live Server.
 - All content (hazards, questions, weights, education, jurisdiction terms, links, contacts, disclaimer, current-as-at date) lives in small files under `js/data/`. Logic and layout never hold wording.
 - CSP allows only same-origin scripts and styles: no inline `<script>`/`style=""`, no CDNs, no third-party embeds, no trackers.

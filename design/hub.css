@@ -1,0 +1,6 @@
+body { margin: 0; background: oklch(0.97 0.005 90); color: oklch(0.25 0.01 260); font-family: system-ui, sans-serif; line-height: 1.6; }
+main { max-width: 52rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.directions { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.directions li { background: oklch(0.995 0.003 90); border: 1px solid oklch(0.87 0.01 90); border-radius: 0.6rem; padding: 0.2rem 1.4rem 0.8rem; }
+.links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-weight: 600; }
+a { color: oklch(0.42 0.13 255); }

@@ -82,6 +82,7 @@ function renderNav(path) {
 
 function renderShell() {
   document.getElementById('brand').textContent = site.title;
+  document.getElementById('utility-note').textContent = site.independenceNote;
 
   const select = document.getElementById('jurisdiction');
   select.replaceChildren(...Object.values(jurisdictions).map(jur => el('option', { value: jur.id }, jur.label)));
