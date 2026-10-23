@@ -5,11 +5,11 @@ Last updated 2026-10-23, end of a long session. Read this first, then only the f
 ## Where things stand
 
 - **Built:** Phase 0 (scaffold, pipeline), Phase 1 (shell, jurisdictions, hazard library), design foundations ("Civic"), Phase 2 (triage), Phase 3 (understanding the risk, investigating), Phase 4 (evidence audit). Site version 0.4.0.
-- **Live site** (https://psychosocialhazards.netlify.app) shows everything **up to design foundations only**. Phases 2, 3 and 4 are committed and tagged **locally but not pushed**: commits `8842b8e` (phase-2), `6890f5a` (phase-3), `22ef1e3` (phase-4), `a2680ac` (research brief), plus the handover commit. Local tags `phase-2`, `phase-3`, `phase-4` exist; no GitHub Releases yet for them.
+- **Live site** (https://psychosocialhazards.netlify.app) shows everything through Phase 4. Pushed 2026-10-23: `main`, tags `phase-2`, `phase-3`, `phase-4`, and GitHub Releases for all three. Live `#/triage`, `#/risk`, `#/investigate` checked: render, no console errors.
 
 ## Waiting on the owner
 
-1. **Test Phases 2 and 3 in Live Server**, then say "push". The brief says the owner tests locally before anything goes live.
+1. ~~Test Phases 2 and 3, then push~~ Done 2026-10-23.
 2. **Answer the four Phase 4 decisions** (end of `docs/phases/phase-4.md`): weight set (Option A Mikkelsen 2021 recommended), how to treat hazards with no evidence (neutral labelled judgement weight recommended), OK to propose judgement rules for frequency/severity/combining/controls, and whether the Risk Model itself should be updated later (separate project).
 3. **Gemini deep research report.** Owner is running `prompts/research/gemini-deep-research-scoring.md` in Gemini. Report will land at `research/notes/gemini-deep-research-report.md`. Verify **every** figure against the cited source (Europe PMC full text API works for open-access papers) before adding to `EVIDENCE_REGISTER.md`. Then propose final weights and score rules for approval.
 4. Owner review of draft content: hazard text (`reviewStatus: 'draft'`), triage/risk/investigation wording, severity scale (minor/moderate/serious/severe) and controls scale (nothing/not working/partly/working well), which Phase 5 will build on.
