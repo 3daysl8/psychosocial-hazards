@@ -3,7 +3,7 @@
     "deny": [
       "Read(./research/papers/**)",
       "Read(./site/downloads/**)",
-      "Read(./reference/**)"
+      "Read(./reference/*.pdf)"
     ]
   }
 }

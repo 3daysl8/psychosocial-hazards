@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychological Risk Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* Base */
+  --bg:        #f7f9f7;
+  --surface:   #ffffff;
+  --surface-2: #f0f5f2;
+  --ink:       #1a2e1f;
+  --ink-mid:   #3d5444;
+  --muted:     #7a9282;
+  --border:    #d4e2da;
+  --border-light: #e8f0eb;
+
+  /* Pillar palette — single green-teal family */
+  --org:   #2d7d5a;   /* forest green */
+  --job:   #1a6b72;   /* deep teal */
+  --ind:   #4a8c6a;   /* sage green */
+
+  /* Risk spectrum */
+  --risk-low:    #3a8a5c;
+  --risk-mod:    #b07d2a;
+  --risk-high:   #c45e3a;
+  --risk-vhigh:  #9b2c2c;
+
+  /* Accent */
+  --accent:      #2d7d5a;
+  --accent-soft: #e8f4ee;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  padding: 28px 20px 64px;
+}
+
+.page { max-width: 1120px; margin: 0 auto; }
+
+/* ── HEADER ── */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.header-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+/* ── GAUGE CARD ── */
+.gauge-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 1px 4px rgba(30,60,40,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle tinted background that shifts with risk level */
+.gauge-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gauge-tint, transparent);
+  transition: background 0.6s ease;
+  pointer-events: none;
+  border-radius: 14px;
+}
+
+@media (min-width: 560px) {
+  .gauge-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+  }
+}
+
+.gauge-wrap {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.gauge-wrap svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+.g-track { fill: none; stroke: var(--border); stroke-width: 16; stroke-linecap: round; }
+.g-bg    { fill: none; stroke: var(--surface-2); stroke-width: 16; stroke-linecap: round; }
+.g-fill  {
+  fill: none;
+  stroke-width: 16;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.4,0,0.2,1), stroke 0.4s ease;
+}
+.g-needle {
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease;
+  transform-origin: 100px 108px;
+}
+
+.gauge-right {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.gauge-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.gauge-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 7vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.4s ease;
+  color: var(--ink);
+}
+
+.gauge-desc {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  max-width: 420px;
+  transition: color 0.4s ease;
+}
+
+.gauge-chips {
+  margin-top: 16px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: background 0.35s, color 0.35s;
+  border: 1px solid transparent;
+}
+
+.chip-sep {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Pillars */
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 719px) {
+  .pillars {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 720px) {
+  .pillars {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.pillar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 720px) {
+  .pillar-col { padding: 0 10px; }
+  .pillar-col:first-child { padding-left: 0; }
+  .pillar-col:last-child { padding-right: 0; }
+}
+
+/* Cascade arrows */
+.flow-arrow {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56px;
+  gap: 2px;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+@media (min-width: 720px) {
+  .flow-arrow { display: flex; }
+}
+
+.a-shaft { width: 1px; height: 20px; background: var(--border); }
+.a-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  line-height: 1;
+  margin: 3px 0;
+  font-weight: 500;
+}
+.a-head {
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid var(--border);
+}
+
+.mobile-arrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.mobile-arrow::before, .mobile-arrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+@media (min-width: 720px) { .mobile-arrow { display: none; } }
+
+/* ── PILLAR CARD ── */
+.pillar-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(30,60,40,0.05);
+  flex: 1;
+}
+
+.pillar-num {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.pillar-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+
+.pillar-sub {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* Progress bar */
+.bar-wrap {
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.bar-fill {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 50%;
+  border-radius: 6px;
+  transition: width 0.45s cubic-bezier(0.4,0,0.2,1), background 0.45s ease;
+}
+
+.bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.bar-score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bar-score-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.35s ease;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  transition: background 0.35s, color 0.35s;
+}
+
+/* ── FACTORS ── */
+.factors { display: flex; flex-direction: column; gap: 1px; }
+
+.f-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  background: transparent;
+}
+
+.f-row:hover { background: var(--surface-2); }
+.f-row.ar { background: #fff4f0; }
+.f-row.ap { background: #edf7f2; }
+
+.f-indicator {
+  width: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 28px;
+  transition: background 0.2s;
+  background: var(--border);
+}
+
+.f-row.ar .f-indicator { background: var(--risk-high); }
+.f-row.ap .f-indicator { background: var(--risk-low); }
+
+.f-text { flex: 1; min-width: 0; }
+
+.f-name {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.f-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.f-tag.p { color: var(--risk-low); }
+.f-tag.r { color: var(--muted); }
+.f-row.ar .f-tag.r { color: var(--risk-high); }
+
+.f-status {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── PILL BUTTONS ── */
+.f-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.fpill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.fpill:hover {
+  border-color: var(--ink-mid);
+  color: var(--ink);
+}
+
+.fpill:active { transform: scale(0.93); }
+
+.fpill.active-prot {
+  background: var(--risk-low);
+  border-color: var(--risk-low);
+  color: #fff;
+}
+
+.fpill.active-risk {
+  background: #9b2c2c;
+  border-color: #9b2c2c;
+  color: #fff;
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 11.5px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.disclaimer strong {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ── RESET BUTTON ── */
+.controls-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.reset-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.reset-btn:hover { border-color: var(--ink-mid); color: var(--ink); }
+
+/* ── MOBILE STICKY HEADER ── */
+.mobile-sticky {
+  /* Desktop: normal flow */
+}
+
+@media (max-width: 719px) {
+  .mobile-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    padding-top: 12px;
+    margin: -28px -20px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 16px rgba(30,60,40,0.08);
+  }
+
+  /* Compact the gauge card on mobile when sticky */
+  .mobile-sticky .gauge-card {
+    margin-bottom: 10px;
+    padding: 16px 18px;
+    border-radius: 10px;
+  }
+
+  .mobile-sticky .gauge-wrap {
+    max-width: 100px;
+  }
+
+  .mobile-sticky .gauge-value {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+
+  .mobile-sticky .gauge-desc {
+    display: none;
+  }
+
+  .mobile-sticky .controls-bar {
+    margin-bottom: 0;
+  }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .g-fill, .g-needle, .bar-fill, .gauge-value, .fbtn,
+  .gauge-card::before, .f-row, .f-indicator { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="eyebrow">Interactive Model · Psychological Health &amp; Safety</div>
+    <h1>Psychological Risk <em>Model</em></h1>
+    <p class="header-meta">Toggle factors across the three pillars to see how organisational, job, and individual conditions compound psychosocial risk. Scores update in real time.</p>
+  </header>
+
+  <!-- GAUGE CARD -->
+  <div class="mobile-sticky">
+    <div class="gauge-card" id="gaugeCard">
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <path class="g-track" d="M 18 108 A 82 82 0 0 1 182 108"/>
+        <path class="g-fill" id="gFill"
+          d="M 18 108 A 82 82 0 0 1 182 108"
+          stroke="#2d7d5a"
+          stroke-dasharray="257"
+          stroke-dashoffset="257"
+        />
+        <g class="g-needle" id="gNeedle" style="transform: rotate(-90deg); transform-origin: 100px 108px; opacity: 0.25;">
+          <line x1="100" y1="108" x2="100" y2="36"
+            stroke="#1a2e1f" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+          <circle cx="100" cy="108" r="5" fill="#1a2e1f" opacity="0.15"/>
+          <circle cx="100" cy="108" r="3" fill="#1a2e1f"/>
+        </g>
+        <text x="12"  y="118" font-size="8" fill="#7a9282" font-family="DM Sans,sans-serif" font-weight="500">LOW</text>
+        <text x="155" y="118" font-size="8" fill="#7a9282" font-family="DM Sans,sans-serif" font-weight="500">HIGH</text>
+      </svg>
+    </div>
+    <div class="gauge-right">
+      <div class="gauge-label">Overall Psychological Risk</div>
+      <div class="gauge-value" id="metreVal" style="color: var(--muted);">Not assessed</div>
+      <div class="gauge-desc" id="metreDesc">Toggle factors across the three pillars to build a picture. The model scores nothing until you give it information.</div>
+      <div class="gauge-chips" id="metreChips"></div>
+    </div>
+  </div>
+
+  <div class="controls-bar">
+    <button class="reset-btn" id="resetBtn">Reset all</button>
+  </div>
+  </div><!-- end mobile-sticky -->
+
+  <!-- PILLARS -->
+  <div class="pillars" id="pillarsGrid"></div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>About this model.</strong> Factor weights are derived from meta-analytic effect sizes (Niedhammer, Bertrais &amp; Witt, 2021; Stansfeld &amp; Candy, 2006) and mapped to Job Demand-Control-Support and Effort-Reward Imbalance frameworks. This tool has face validity only — it is a conceptual demonstration for educational purposes only, not a validated predictive instrument. Scores should not be used to make individual employment or clinical decisions.
+  </div>
+
+</div>
+
+<script>
+const PILLARS = [
+  {
+    id: 'org', num: '01', name: 'Organisation',
+    sub: 'Shapes the conditions in which work happens',
+    color: '#2d7d5a', weight: 0.30,
+    factors: [
+      { name: 'Genuine leadership commitment to psychological safety', type: 'p' },
+      { name: 'High workload demands with no mechanism for relief',    type: 'r' },
+      { name: 'Clear, fair, and consistent workplace policies',        type: 'p' },
+      { name: 'Toxic or blame-based organisational culture',           type: 'r' },
+      { name: 'Early intervention & proactive support systems',        type: 'p' },
+      { name: 'Poorly managed organisational change or restructure',   type: 'r' },
+    ]
+  },
+  {
+    id: 'job', num: '02', name: 'Job Role',
+    sub: 'Shapes the day-to-day experience of work',
+    color: '#1a6b72', weight: 0.35,
+    factors: [
+      { name: 'High job demands with low decision-making control',    type: 'r' },
+      { name: 'Role clarity & well-defined responsibilities',         type: 'p' },
+      { name: 'Workplace bullying, harassment, or conflict exposure', type: 'r' },
+      { name: 'Meaningful work with recognition & regular feedback',  type: 'p' },
+      { name: 'Emotional labour or repeated trauma exposure',         type: 'r' },
+      { name: 'Supportive team relationships & peer connection',      type: 'p' },
+    ]
+  },
+  {
+    id: 'ind', num: '03', name: 'Individual',
+    sub: 'The person carrying the cumulative load',
+    color: '#4a8c6a', weight: 0.35,
+    factors: [
+      { name: 'Strong psychological resilience & coping capacity',    type: 'p' },
+      { name: 'Chronic sleep deprivation or fatigue',                 type: 'r' },
+      { name: 'Pre-existing mental health condition or vulnerability', type: 'r' },
+      { name: 'High self-efficacy & sense of agency at work',         type: 'p' },
+      { name: 'Social isolation or lack of support outside work',     type: 'r' },
+      { name: 'Meaningful life outside work & recovery routines',     type: 'p' },
+    ]
+  }
+];
+
+const ARC = 257;
+const state = {};
+PILLARS.forEach(p => { state[p.id] = p.factors.map(() => 0); });
+
+function getRaw(id) {
+  const p = PILLARS.find(x => x.id === id);
+  let raw = 0;
+  p.factors.forEach((f, i) => { raw += (f.type === 'r') ? state[id][i] : -state[id][i]; });
+  const max = p.factors.length * 2;
+  return Math.max(-max, Math.min(max, raw)) / max;
+}
+
+function getPillarScore(id) {
+  let raw = getRaw(id);
+  if (id === 'job') raw = raw * 0.85 + getRaw('org') * 0.15;
+  if (id === 'ind') {
+    const jobRaw = getRaw('job') * 0.85 + getRaw('org') * 0.15;
+    raw = raw * 0.80 + jobRaw * 0.15 + getRaw('org') * 0.05;
+  }
+  return Math.round((raw * 5 + 5) * 10) / 10;
+}
+
+function getOverall() {
+  return Math.round(PILLARS.reduce((s, p) => s + getPillarScore(p.id) * p.weight, 0) * 10) / 10;
+}
+
+function riskColor(s) {
+  if (s <= 2.5) return '#3a8a5c';
+  if (s <= 5)   return '#b07d2a';
+  if (s <= 7)   return '#c45e3a';
+  return '#9b2c2c';
+}
+
+function riskLabel(s) {
+  if (s <= 3)   return 'Low';
+  if (s <= 5)   return 'Moderate';
+  if (s <= 7)   return 'High';
+  return 'Very High';
+}
+
+function riskDesc(s) {
+  if (s <= 3)   return 'Protective factors are dominant. Organisational conditions are buffering job demands, and individuals carry manageable loads.';
+  if (s <= 5)   return 'A mixed picture. Some risk factors are present but partially offset by protective conditions. Strengthening upstream factors now reduces downstream individual risk.';
+  if (s <= 7)   return 'Risk factors are accumulating across pillars. Job demands are landing heavily on individuals. Psychological injury likelihood is elevated without targeted intervention.';
+  return 'The causal chain from organisation through to the individual is heavily loaded. Systemic, multi-level action is urgently needed.';
+}
+
+function riskGaugeTint(s) {
+  if (s <= 3)   return 'rgba(58,138,92,0.04)';
+  if (s <= 5)   return 'rgba(176,125,42,0.04)';
+  if (s <= 7)   return 'rgba(196,94,58,0.05)';
+  return 'rgba(155,44,44,0.06)';
+}
+
+function riskGaugeStroke(s) {
+  if (s <= 3)   return '#3a8a5c';
+  if (s <= 5)   return '#b07d2a';
+  if (s <= 7)   return '#c45e3a';
+  return '#9b2c2c';
+}
+
+function hasAnyToggle() {
+  return PILLARS.some(p => state[p.id].some(v => v !== 0));
+}
+
+function countToggled(id) {
+  return state[id].filter(v => v !== 0).length;
+}
+
+function refreshMetre() {
+  const needle = document.getElementById('gNeedle');
+  const val = document.getElementById('metreVal');
+  const desc = document.getElementById('metreDesc');
+  const fill = document.getElementById('gFill');
+
+  if (!hasAnyToggle()) {
+    // Unset state — nothing assessed yet
+    needle.style.transform = 'rotate(-90deg)';
+    needle.style.opacity = '0.2';
+    fill.style.strokeDashoffset = ARC;
+    val.textContent = 'Not assessed';
+    val.style.color = 'var(--muted)';
+    val.style.fontStyle = 'normal';
+    desc.textContent = 'Toggle factors across the three pillars to build a picture. The model scores nothing until you give it information.';
+    document.getElementById('gaugeCard').style.setProperty('--gauge-tint', 'transparent');
+    document.getElementById('metreChips').innerHTML = '';
+    return;
+  }
+
+  const score = getOverall();
+  const ratio = score / 10;
+  const col = riskColor(score);
+
+  fill.style.strokeDashoffset = ARC - ratio * ARC;
+  fill.style.stroke = riskGaugeStroke(score);
+  needle.style.transform = `rotate(${-90 + ratio * 180}deg)`;
+  needle.style.opacity = '1';
+
+  val.textContent = riskLabel(score);
+  val.style.color = col;
+  val.style.fontStyle = 'normal';
+
+  desc.textContent = riskDesc(score);
+
+  document.getElementById('gaugeCard').style.setProperty('--gauge-tint', riskGaugeTint(score));
+
+  document.getElementById('metreChips').innerHTML =
+    PILLARS.map((p, i) => {
+      const s = getPillarScore(p.id);
+      const c = riskColor(s);
+      const sep = i > 0 ? '<span class="chip-sep">·</span>' : '';
+      return sep + `<div class="chip" style="background:${c}14;color:${c};border-color:${c}30">${p.name} ${s.toFixed(1)}</div>`;
+    }).join('');
+}
+
+function refreshPillar(id) {
+  const pillar = PILLARS.find(x => x.id === id);
+  const pc = pillar.color;
+  const fill = document.getElementById('fill-' + id);
+  const num = document.getElementById('num-' + id);
+  const badge = document.getElementById('badge-' + id);
+  const assessed = state[id].some(v => v !== 0);
+
+  if (!assessed) {
+    fill.style.width = '0%';
+    num.textContent = '—';
+    num.style.color = 'var(--muted)';
+    badge.textContent = 'Not assessed';
+    badge.style.background = 'var(--surface-2)';
+    badge.style.color = 'var(--muted)';
+    return;
+  }
+
+  const score = getPillarScore(id);
+  const pct = (score / 10) * 100;
+  const col = riskColor(score);
+
+  fill.style.width = pct + '%';
+  fill.style.background = `linear-gradient(to right, ${pc}99, ${pc})`;
+  num.textContent = score.toFixed(1);
+  num.style.color = pc;
+  badge.textContent = riskLabel(score) + ' risk';
+  badge.style.background = col + '14';
+  badge.style.color = col;
+}
+
+function refreshAll() {
+  PILLARS.forEach(p => refreshPillar(p.id));
+  refreshMetre();
+}
+
+function updateRowUI(pid, idx) {
+  const f = PILLARS.find(x => x.id === pid).factors[idx];
+  const v = state[pid][idx];
+  const row = document.getElementById(`row-${pid}-${idx}`);
+  const upB = document.getElementById(`up-${pid}-${idx}`);
+  const dnB = document.getElementById(`dn-${pid}-${idx}`);
+  const statusEl = document.getElementById(`status-${pid}-${idx}`);
+
+  row.className = 'f-row';
+  upB.className = 'fpill';
+  dnB.className = 'fpill';
+
+  if (v > 0) {
+    row.classList.add(f.type === 'r' ? 'ar' : 'ap');
+    upB.classList.add(f.type === 'r' ? 'active-risk' : 'active-prot');
+  } else if (v < 0) {
+    row.classList.add(f.type === 'p' ? 'ar' : 'ap');
+    dnB.classList.add(f.type === 'p' ? 'active-risk' : 'active-prot');
+  }
+
+  if (statusEl) {
+    const isRisk = (f.type === 'r' && v > 0) || (f.type === 'p' && v < 0);
+    if (v === 0) {
+      statusEl.textContent = '';
+      statusEl.style.color = '';
+    } else {
+      statusEl.textContent = 'YES';
+      statusEl.style.color = isRisk ? '#9b2c2c' : '#3a8a5c';
+    }
+  }
+}
+
+function toggle(pid, idx, dir) {
+  // Clicking the active pill deselects back to neutral; clicking the other sets it directly
+  state[pid][idx] = (state[pid][idx] === dir) ? 0 : dir;
+  updateRowUI(pid, idx);
+  refreshAll();
+}
+
+function resetAll() {
+  PILLARS.forEach(p => {
+    p.factors.forEach((_, idx) => {
+      state[p.id][idx] = 0;
+      updateRowUI(p.id, idx);
+    });
+  });
+  refreshAll();
+}
+
+function buildUI() {
+  const grid = document.getElementById('pillarsGrid');
+  PILLARS.forEach((p, pi) => {
+    if (pi > 0) {
+      const mArrow = document.createElement('div');
+      mArrow.className = 'mobile-arrow';
+      mArrow.textContent = 'flows into ' + p.name;
+      grid.appendChild(mArrow);
+
+      const dArrow = document.createElement('div');
+      dArrow.className = 'flow-arrow';
+      dArrow.innerHTML = `<div class="a-shaft"></div><div class="a-label">flows into</div><div class="a-head"></div>`;
+      grid.appendChild(dArrow);
+    }
+
+    const col = document.createElement('div');
+    col.className = 'pillar-col';
+
+    const card = document.createElement('div');
+    card.className = 'pillar-card';
+
+    card.innerHTML = `
+      <div class="pillar-num">${p.num} / 03</div>
+      <div class="pillar-name" style="color:${p.color}">${p.name}</div>
+      <div class="pillar-sub">${p.sub}</div>
+    `;
+
+    // Bar
+    const barWrap = document.createElement('div');
+    barWrap.className = 'bar-wrap';
+    const fill = document.createElement('div');
+    fill.className = 'bar-fill';
+    fill.id = 'fill-' + p.id;
+    fill.style.width = '0%';
+    fill.style.background = `linear-gradient(to right, ${p.color}99, ${p.color})`;
+    barWrap.appendChild(fill);
+    card.appendChild(barWrap);
+
+    const barLabels = document.createElement('div');
+    barLabels.className = 'bar-labels';
+    barLabels.innerHTML = '<span>0</span><span>5</span><span>10</span>';
+    card.appendChild(barLabels);
+
+    // Score + badge row
+    const scoreRow = document.createElement('div');
+    scoreRow.className = 'bar-score-row';
+    const scoreEl = document.createElement('div');
+    scoreEl.className = 'bar-score-num';
+    scoreEl.id = 'num-' + p.id;
+    scoreEl.style.color = p.color;
+    scoreEl.textContent = '—';
+    scoreEl.style.color = 'var(--muted)';
+    const badge = document.createElement('div');
+    badge.className = 'badge';
+    badge.id = 'badge-' + p.id;
+    badge.style.background = 'var(--surface-2)';
+    badge.style.color = 'var(--muted)';
+    badge.textContent = 'Not assessed';
+    scoreRow.appendChild(scoreEl);
+    scoreRow.appendChild(badge);
+    card.appendChild(scoreRow);
+
+    // Factors
+    const flist = document.createElement('div');
+    flist.className = 'factors';
+    p.factors.forEach((f, idx) => {
+      const row = document.createElement('div');
+      row.className = 'f-row';
+      row.id = `row-${p.id}-${idx}`;
+      row.innerHTML = `
+        <div class="f-indicator"></div>
+        <div class="f-text">
+          <div class="f-name">${f.name}</div>
+          <div class="f-tag ${f.type}">${f.type === 'p' ? '↑ Protective' : '↓ Risk factor'}</div>
+        </div>
+        <div class="f-status" id="status-${p.id}-${idx}"></div>
+        <div class="f-pills">
+          <button class="fpill" id="up-${p.id}-${idx}" aria-label="Present">Present</button>
+          <button class="fpill" id="dn-${p.id}-${idx}" aria-label="Absent">Absent</button>
+        </div>`;
+      flist.appendChild(row);
+    });
+    card.appendChild(flist);
+    col.appendChild(card);
+    grid.appendChild(col);
+  });
+
+  PILLARS.forEach(p => {
+    p.factors.forEach((_, idx) => {
+      document.getElementById(`up-${p.id}-${idx}`).addEventListener('click', () => toggle(p.id, idx, 1));
+      document.getElementById(`dn-${p.id}-${idx}`).addEventListener('click', () => toggle(p.id, idx, -1));
+    });
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', resetAll);
+}
+
+buildUI();
+refreshAll();
+</script>
+</body>
+</html>

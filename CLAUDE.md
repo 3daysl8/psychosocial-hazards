@@ -2,9 +2,9 @@
 
 Browser-only web guide for Australian HR practitioners and Health and Safety Representatives (HSRs). Walks them through identifying, investigating and controlling psychosocial hazards after an incident or report, gives an indicative risk score, and teaches the concepts along the way. Sister tool to the Psychological Risk Model (https://psychologicalriskmetre.netlify.app/). Plain HTML/CSS/JS, public GitHub repo, Netlify deploys `site/` only. Owner is not a professional developer: explain non-obvious things briefly, keep code simple.
 
-## Current phase: 3 complete, next is 4
+## Current phase: 4 complete, awaiting owner review before 5
 
-Phases 2 (triage) and 3 (risk, investigating) done. Next: Phase 4 evidence audit. Needs the Risk Model source in `reference/risk-model/` and the owner's OK to lift the `reference/**` read deny. Stop for review before Phase 5. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
+Phase 4 evidence audit done (`docs/phases/phase-4.md`, `EVIDENCE_REGISTER.md`). Phase 5 (score) waits for the owner's answers to the four decisions in the Phase 4 report. Risk Model source: `reference/risk-model/` (read only). Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
 Guided pages are data files rendered by `js/views/flow.js`; answers live in memory only (`js/lib/state.js`).
 Site structure: `js/app.js` router + shell, `js/views/` one file per page, `js/lib/` helpers, `js/data/` all wording. Use `{dutyHolder}`-style placeholders for jurisdiction terms.
 Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl8/psychosocial-hazards (local folder name differs, that's fine). Push to `main` auto-deploys.
@@ -15,7 +15,7 @@ Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl
 - `resources/` editable sources for printable guides (has its own CLAUDE.md).
 - `docs/` brief, content rules, scoring method, education roadmap, `phases/phase-N.md`.
 - `prompts/` exact prompts used per phase, for others to replay.
-- `reference/risk-model/` original Risk Model source. Read-only, read deny until Phase 4.
+- `reference/risk-model/` original Risk Model source. Read-only; audited in Phase 4.
 - `research/papers/` PDFs, gitignored, never read. `research/notes/` short extractions.
 - `EVIDENCE_REGISTER.md` single source of truth for every factor, weight and regulatory claim.
 - `BUILD_LOG.md` short index table, detail in `docs/phases/`.
@@ -40,4 +40,4 @@ Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl
 
 ## Token habits
 
-Open only the data file being changed. Don't re-read files just written. When the `reference/**` deny is lifted in Phase 4, read the Risk Model once, record findings in the register, then work from the register.
+Open only the data file being changed. Don't re-read files just written. The Risk Model has been audited; work from `EVIDENCE_REGISTER.md`, not the Risk Model source.
