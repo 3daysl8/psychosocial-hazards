@@ -11,7 +11,7 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.2.0',
+  version: '0.3.0',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
   currentAsAt: '2026-10-23',
@@ -39,7 +39,18 @@ export const site = {
   nav: [
     { href: '#/', label: 'Home' },
     { href: '#/hazards', label: 'Hazard library' },
+    { href: '#/triage', label: 'Something\'s happened' },
     { href: '#/law', label: 'Law and regulators' },
+  ],
+
+  // The guided path, shown as numbered steps at the top of each guided page.
+  // Steps without an href aren't built yet and show as plain text.
+  flow: [
+    { href: '#/triage', label: 'Something\'s happened' },
+    { label: 'Understanding the risk' },
+    { label: 'Investigating' },
+    { label: 'Controls and review' },
+    { label: 'Summary' },
   ],
 
   roleLabels: { hr: 'For HR', hsr: 'For HSRs' },
@@ -65,7 +76,7 @@ export const site = {
   // The guide's sections, shown on the home page. Change status to 'available' as each is built.
   sections: [
     { title: 'Hazard library', href: '#/hazards', status: 'available', summary: 'The common psychosocial hazards listed for your jurisdiction, with examples and early warning signs.' },
-    { title: 'Something\'s happened', status: 'coming', summary: 'Immediate safety and support, the notifiable incident check, and which processes run side by side.' },
+    { title: 'Something\'s happened', href: '#/triage', status: 'available', summary: 'Immediate safety and support, the notifiable incident check, and which processes run side by side.' },
     { title: 'Understanding the risk', status: 'coming', summary: 'Gathering objective information, consulting workers and HSRs, and an indicative risk score.' },
     { title: 'Investigating systemic factors', status: 'coming', summary: 'What conditions allowed this harm to occur.' },
     { title: 'Controls and review', status: 'coming', summary: 'The hierarchy of controls for psychosocial hazards, and 30/60/90 day reviews.' },

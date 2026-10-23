@@ -185,3 +185,44 @@ textarea { border-radius: var(--radius); width: 100%; }
   .layout { display: block; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Guided pages (Phases 2 and 3): sections, checklists, process comparison, exposure ratings */
+.flow h1 { margin-top: 1.5rem; }
+.flow-section { margin-top: 2.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+.flow-section > h2 { margin-top: 1.2rem; }
+.flow .question, .flow .field-wide { margin: 1.5rem 0; }
+.steps a { display: flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none; }
+.steps a:hover { color: var(--primary); }
+.steps .is-coming { color: var(--muted); font-weight: 400; background: transparent; border: 1px dashed var(--line); }
+.support-note { font-size: 0.9rem; }
+.processes { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: 1.5rem 0; }
+.process-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 1.2rem 0.6rem; }
+.process-card:first-child { background: var(--panel-soft); border-color: var(--primary); }
+.process-card h3 { margin-top: 0.8rem; }
+.process-card dl { margin: 0; }
+.process-card dt { font-size: 0.78rem; font-weight: 700; color: var(--muted); margin-top: 0.6rem; }
+.process-card dd { margin: 0.1rem 0 0; font-size: 0.93rem; }
+.key-point { font-weight: 600; font-size: 0.93rem; }
+.prompt-list { padding-left: 1.2rem; }
+.prompt-list li { margin-bottom: 0.4rem; }
+.exposure { margin: 1rem 0; }
+.exposure-item { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 0.2rem 1.25rem 0.6rem; margin: 1rem 0; }
+.exposure-item h3 { margin-top: 0.9rem; }
+.exposure-choices { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.question.compact { border: 0; padding: 0; }
+.question.compact legend { font-size: 0.95rem; padding: 0; margin-bottom: 0.4rem; }
+.question.compact .option { padding: 0.45rem 0.7rem; font-size: 0.9rem; }
+.combine-count { background: var(--panel); border-radius: var(--radius); padding: 0.7rem 1rem; font-weight: 600; }
+.empty-note { color: var(--muted); font-style: italic; }
+.next-coming { color: var(--muted); font-weight: 600; margin: 0; align-self: center; }
+.clear-answers { margin-top: 2.5rem; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--panel-soft); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.clear-answers p { margin: 0; font-size: 0.88rem; flex: 1 1 18rem; }
+button.button { font: inherit; font-weight: 700; cursor: pointer; background: var(--bg); color: var(--primary); }
+button.button:hover { background: var(--panel); }
+@media print {
+  .steps, .clear-answers, .actions, .learn-more:not([open]) { display: none !important; }
+  .option:not(:has(input:checked)) { display: none; }
+}
+.field-wide { display: flex; flex-direction: column; gap: 0.3rem; }
+.field-wide label { font-weight: 700; font-size: 1.05rem; }
+.field-wide .hint { margin: 0; }

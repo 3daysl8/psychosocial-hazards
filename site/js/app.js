@@ -4,15 +4,19 @@
 
 import { site, jurisdictions } from './data/jurisdictions.js';
 import { el, externalLink } from './lib/dom.js';
-import { fillTerms, formatDate } from './lib/text.js';
+import { fillTerms, forJurisdiction, formatDate } from './lib/text.js';
+import { hasAnswers, resetListeners } from './lib/state.js';
 import { homeView } from './views/home.js';
 import { hazardListView, hazardDetailView } from './views/hazards.js';
 import { lawView } from './views/law.js';
+import { flowView } from './views/flow.js';
+import { triagePage } from './data/triage.js';
 
 const routes = [
   { pattern: /^\/$/, view: homeView },
   { pattern: /^\/hazards$/, view: hazardListView },
   { pattern: /^\/hazards\/([\w-]+)$/, view: hazardDetailView },
+  { pattern: /^\/triage$/, view: ctx => flowView(ctx, triagePage) },
   { pattern: /^\/law$/, view: lawView },
 ];
 
@@ -31,7 +35,12 @@ let jurisdictionId = savedJurisdiction();
 
 function context() {
   const jur = jurisdictions[jurisdictionId];
-  return { site, jur, fill: text => fillTerms(text, jur.terms) };
+  return {
+    site,
+    jur,
+    fill: text => fillTerms(forJurisdiction(text, jur.id), jur.terms),
+    rerender: () => renderPage({ moveFocus: false }),
+  };
 }
 
 function currentPath() {
@@ -51,6 +60,7 @@ function notFoundView() {
 function renderPage({ moveFocus }) {
   const path = currentPath();
   const ctx = context();
+  resetListeners();
   let page = null;
   for (const route of routes) {
     const match = path.match(route.pattern);
@@ -111,3 +121,8 @@ function renderShell() {
 renderShell();
 renderPage({ moveFocus: false });
 window.addEventListener('hashchange', () => renderPage({ moveFocus: true }));
+
+// Answers are never saved, so warn before a reload or close would lose them.
+window.addEventListener('beforeunload', event => {
+  if (hasAnswers()) event.preventDefault();
+});

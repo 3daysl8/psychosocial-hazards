@@ -9,7 +9,7 @@ Part of the same family as the [Psychological Risk Model](https://psychologicalr
 - **Live site:** https://psychosocialhazards.netlify.app
 - **Repo:** https://github.com/3daysl8/psychosocial-hazards
 
-**Status:** in development (Phase 1 complete). See [BUILD_LOG.md](BUILD_LOG.md).
+**Status:** in development (Phase 2 complete). See [BUILD_LOG.md](BUILD_LOG.md).
 
 ## Run it locally
 

@@ -6,9 +6,10 @@ import { el, externalLink } from './dom.js';
 // A "TODO-VERIFY" note. Shows the full text while site.showVerifyNotes is true,
 // otherwise a neutral line so unfinished checks don't read as errors.
 export function verifyNote(text, ctx) {
-  if (!text) return null;
+  const filled = ctx.fill(text);
+  if (!filled) return null;
   return el('p', { class: 'verify-note' },
-    ctx.site.showVerifyNotes ? ctx.fill(text) : 'This point is being checked against the official source.');
+    ctx.site.showVerifyNotes ? filled : 'This point is being checked against the official source.');
 }
 
 export function draftBadge(label) {
@@ -19,7 +20,7 @@ export function draftBadge(label) {
 export function roleCallouts(callouts, ctx) {
   if (!callouts) return [];
   return Object.entries(ctx.site.roleLabels)
-    .filter(([role]) => callouts[role])
+    .filter(([role]) => callouts[role] && ctx.fill(callouts[role].text))
     .map(([role, label]) => el('aside', { class: `callout callout-${role}`, 'aria-label': label },
       el('p', { class: 'callout-label' }, label),
       el('p', {}, ctx.fill(callouts[role].text)),
