@@ -184,5 +184,5 @@ export const triagePage = {
       ],
     },
   ],
-  next: { label: 'Next: Understanding the risk (coming in the next build phase)' },
+  next: { href: '#/risk', label: 'Continue to understanding the risk' },
 };

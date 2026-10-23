@@ -11,12 +11,16 @@ import { hazardListView, hazardDetailView } from './views/hazards.js';
 import { lawView } from './views/law.js';
 import { flowView } from './views/flow.js';
 import { triagePage } from './data/triage.js';
+import { riskPage } from './data/risk.js';
+import { investigationPage } from './data/investigation.js';
 
 const routes = [
   { pattern: /^\/$/, view: homeView },
   { pattern: /^\/hazards$/, view: hazardListView },
   { pattern: /^\/hazards\/([\w-]+)$/, view: hazardDetailView },
   { pattern: /^\/triage$/, view: ctx => flowView(ctx, triagePage) },
+  { pattern: /^\/risk$/, view: ctx => flowView(ctx, riskPage) },
+  { pattern: /^\/investigate$/, view: ctx => flowView(ctx, investigationPage) },
   { pattern: /^\/law$/, view: lawView },
 ];
 
