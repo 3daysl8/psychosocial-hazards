@@ -79,6 +79,10 @@ Still to find (needed to close gaps):
 
 All in `EVIDENCE_REGISTER.md`: the candidate sources above, framework citations, Virtanen 2018 DOI.
 
+## Follow-up: external deep research
+
+To fill the gaps, the owner is running a deep literature review with Google Gemini using the brief in `prompts/research/gemini-deep-research-scoring.md`. Its report goes in `research/notes/gemini-deep-research-report.md`, and every figure in it gets checked against the cited source before it enters this register. Parts of it may later become a Resources page item.
+
 ## How to review
 
 1. Read the report above, then the "Risk Model audit" and "Guide hazards mapped to evidence" sections of `EVIDENCE_REGISTER.md`.
