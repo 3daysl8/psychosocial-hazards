@@ -238,3 +238,17 @@ button.button:hover { background: var(--panel); }
 .score-table th, .score-table td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--line); }
 .score-table thead th { font-size: 0.8rem; color: var(--muted); }
 .score-table .score-band { font-weight: 700; }
+
+/* Resources (Phase 6) */
+.resources-section { margin-top: 2.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+.evidence-list { display: grid; gap: 1rem; margin: 1.25rem 0; }
+.evidence-item { border: 1px solid var(--line); border-radius: var(--radius); padding: 0.2rem 1.25rem 0.5rem; }
+.evidence-item h3 { margin: 0.9rem 0 0.3rem; }
+.evidence-status { display: inline-block; font-size: 0.75rem; font-weight: 700; border-radius: 99px; padding: 0.1rem 0.7rem; margin: 0; background: var(--panel); color: var(--primary); }
+.evidence-status.status-none { background: var(--grey); color: inherit; }
+.framework-list dt { font-weight: 700; margin-top: 0.9rem; }
+.framework-list dd { margin: 0.2rem 0 0; }
+.reference-list { list-style: none; padding: 0; }
+.reference-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
+.reference-list p { margin: 0.2rem 0; }
+.reference-cite { font-size: 0.9rem; font-weight: 600; overflow-wrap: anywhere; }

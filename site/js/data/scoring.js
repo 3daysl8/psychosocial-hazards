@@ -63,6 +63,7 @@ export const scoreText = {
   combine: '{count} hazards are rated Moderate or above. Hazards can interact or combine and make each other worse, so look at them together when choosing controls. This flag doesn\'t change any rating.',
   controlsDefault: 'Where a hazard has no controls answer of its own, the answer under "Controls already in place" is used.',
   dutyReminder: 'Whatever the rating, the duty to eliminate or minimise the risk so far as is reasonably practicable still applies. A serious hazard needs action on its own merits.',
+  resourcesLink: 'The research and guidance behind this rating',
   cantTell: 'This rating is a summary of your own answers. It isn\'t a probability that someone will be injured, a diagnosis, or a finding about whether the law has been complied with. Individual circumstances are not included.',
   how: {
     summary: 'How this score works',

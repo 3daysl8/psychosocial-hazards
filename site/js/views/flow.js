@@ -206,6 +206,7 @@ function scorePanel(result, pickedCount, block, ctx, view) {
     result.rows.some(row => row.usedDefault) ? el('p', { class: 'field-note' }, t.controlsDefault) : null,
     el('p', { class: 'key-point' }, t.dutyReminder),
     el('p', {}, t.cantTell),
+    el('p', {}, el('a', { href: '#/resources' }, t.resourcesLink)),
     howItWorks(block, ctx, view));
 }
 

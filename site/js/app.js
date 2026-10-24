@@ -9,6 +9,7 @@ import { hasAnswers, resetListeners } from './lib/state.js';
 import { homeView } from './views/home.js';
 import { hazardListView, hazardDetailView } from './views/hazards.js';
 import { lawView } from './views/law.js';
+import { resourcesView } from './views/resources.js';
 import { flowView } from './views/flow.js';
 import { triagePage } from './data/triage.js';
 import { riskPage } from './data/risk.js';
@@ -22,6 +23,7 @@ const routes = [
   { pattern: /^\/risk$/, view: ctx => flowView(ctx, riskPage) },
   { pattern: /^\/investigate$/, view: ctx => flowView(ctx, investigationPage) },
   { pattern: /^\/law$/, view: lawView },
+  { pattern: /^\/resources$/, view: resourcesView },
 ];
 
 // Only the jurisdiction choice is remembered between visits. Case details are never stored.

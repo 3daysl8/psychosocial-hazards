@@ -82,9 +82,33 @@ The Guide's indicative rating uses no weights. Every rule is `JUDGEMENT`, guided
 | G4 | Flag when 2+ hazards rated Moderate or above; flag never changes a rating | JUDGEMENT | Code s 4.2 (consider hazards collectively), p. 23; Lunen et al. 2023, Eur J Public Health 33(5):821–827, doi 10.1093/eurpub/ckad118 (odds of probable depression rise with number of exposures; VERIFIED, Table 3). No interaction multiplier. |
 | G5 | Overall = highest single hazard rating; nothing averaged | JUDGEMENT | Owner decision 2026-10-24 (`docs/phases/phase-4.md`); arbitration M7 (dividing by a total dilutes a serious single hazard) |
 
-## Guide hazards mapped to evidence (for Phase 5)
+## Guide hazards: what the research shows (Phase 6, shown on the Resources page)
 
-How each hazard in the guide's library would be weighted. Hazards marked GAP need a judgement weight, clearly labelled, or must be left out of the score. Owner to decide in Phase 5.
+No weights. This is what the Resources page (`site/js/data/evidence.js`, "hazards") says about each hazard. Figures are VERIFIED against the original (see Research sources and `research/notes/gemini-report-audit.md` section 3).
+
+| Guide hazard | Evidence type | Key verified figures | Sources |
+|---|---|---|---|
+| Job demands / High job demands | Pooled | High demands, stress-related disorders OR 1.56 (1.41–1.72); workload/demands for depressive episodes CI includes 1; long hours 1.14 (1.03–1.25), Australia 0.95 (0.70–1.29) | van der Molen 2020 T3; Mikkelsen 2021 T2; Virtanen 2018 abstract |
+| Low job demands (Vic) | None found | none | |
+| Low job control | Pooled, mixed | Low decision authority OR 1.34 (1.20–1.49); low decision latitude 1.07 (0.92–1.25); Stansfeld decision latitude 1.23 (1.08–1.39) | van der Molen 2020 T3; Stansfeld & Candy 2006 T1 |
+| Poor support | Pooled | Co-worker OR 1.29 (1.17–1.43); supervisor 1.27 (1.16–1.38) | van der Molen 2020 T3 |
+| Role clarity | Correlational | Role ambiguity r .279, role conflict r .318 with depression | Schmidt 2014 abstract |
+| Organisational change | Single study | Downsizing OR 1.51 (1.12–2.03); job insecurity 1.61 (1.29–2.00) | Fløvik 2019; Rönnblad 2019 |
+| Reward and recognition | Pooled | ERI OR 1.91 (1.70–2.15) stress-related disorders; RR 1.49 (1.23–1.80) depressive disorders | van der Molen 2020 T3; Rugulies 2017 |
+| Organisational justice | Pooled | Procedural OR 1.74 (1.62–1.86); relational 1.55 (1.44–1.67) | van der Molen 2020 T3 |
+| Traumatic events or material | None found (exposure) | Emotional demands OR 1.58 (1.35–1.84) as related exposure | van der Molen 2020 T3 |
+| Remote or isolated work | None found | none | |
+| Physical environment | None found | none | |
+| Violence and aggression | Pooled | Depressive disorder RR 1.42 (1.31–1.54) | Rudkjoebing 2020 |
+| Bullying | Pooled | Depressive symptoms OR 2.82 (2.21–3.59); depressive episodes RR 2.58 (1.13–5.93) | Theorell 2015; Mikkelsen 2021 T2 |
+| Harassment incl. sexual harassment | Correlational | Similar negative effects of different forms (conclusion only; exact values not used) | Sojo 2016 abstract; Gerhardt 2021 T4 |
+| Gendered violence (Vic) | Prospective, not pooled | 29 studies, mostly sexual violence/harassment, consistently linked with poor mental health | Blindow 2024 abstract |
+| Conflict / poor relationships | Correlational | Conflict r −.29, incivility r −.32 with well-being (bullying −.32 in same table) | Gerhardt 2021 T4 |
+| Combination | Single study | 1/2/3/4 exposures OR 2.98 / 3.14 / 6.44 / 9.62 | Lunen 2023 T3 |
+
+## Guide hazards mapped to evidence (Phase 4 proposal, superseded 2026-10-24)
+
+How each hazard would have been weighted under the Phase 4 proposal. Kept as a record; the Guide uses no weights.
 
 | Guide hazard (Model WHS / Victoria name) | Measured exposure | Option A weight | Option B weight | Status |
 |---|---|---|---|---|
@@ -173,17 +197,30 @@ Reviews from 2000–2020. Associations generally stronger for mental disorders t
 - Virtanen M et al (2018). Long working hours and depressive symptoms. *Scand J Work Environ Health*, 44(3), 239–250. Status: VERIFIED via Niedhammer Results text (DOI TO-CHECK).
 - Aronsson G et al (2017). A systematic review including meta-analysis of work environment and burnout symptoms. *BMC Public Health*, 17(1), 264. https://doi.org/10.1186/s12889-017-4153-7. Status: VERIFIED via S1.
 
+**Sources added 2026-10-24 (from the audited Gemini report; each re-checked against the original):**
+- van der Molen HF, Nieuwenhuijsen K, Frings-Dresen MHW, de Groene G (2020). Work-related psychosocial risk factors for stress-related mental disorders: an updated systematic review and meta-analysis. *BMJ Open*, 10(7), e034849. https://doi.org/10.1136/bmjopen-2019-034849. Pooled ORs from **Table 3** (prose differs slightly). Status: VERIFIED.
+- Lunen JC, Rugulies R, Sørensen JK, Andersen LL, Clausen T (2023). Exploring exposure to multiple psychosocial work factors. *Eur J Public Health*, 33(5), 821–827. https://doi.org/10.1093/eurpub/ckad118. Table 3. Status: VERIFIED.
+- Fløvik L, Knardahl S, Christensen JO (2019). Organizational change and employee mental health. *Scand J Work Environ Health*, 45(2), 134–145. https://doi.org/10.5271/sjweh.3777. Status: VERIFIED.
+- Gerhardt C, Semmer NK, Sauter S, et al (2021). How are social stressors at work related to well-being and health? *BMC Public Health*, 21, 890. https://doi.org/10.1186/s12889-021-10894-7. Table 4 overall well-being correlations. Status: VERIFIED.
+- Schmidt S, Roesler U, Kusserow T, Rau R (2014). *Eur J Work Organ Psychol*, 23(1), 91–106. https://doi.org/10.1080/1359432X.2012.711523. Status: VERIFIED (abstract).
+- Sojo VE, Wood RE, Genat AE (2016). Harmful workplace experiences and women's occupational well-being. *Psychology of Women Quarterly*, 40(1), 10–40. https://doi.org/10.1177/0361684315599346. Status: conclusion VERIFIED (abstract); exact values not used (author manuscript differs from the report; not reconciled).
+- Blindow KJ, Cedstrand E, Elling DL, et al (2024). Gender-based violence and harassment at work and health and occupational outcomes. *BMC Public Health*, 24, 1788. https://doi.org/10.1186/s12889-024-19304-0. Status: VERIFIED (abstract, 2026-10-24).
+- Bailey TS, Dollard MF, Richards PAM (2015). A national standard for psychosocial safety climate (PSC). *J Occup Health Psychol*, 20(1), 15–26. https://doi.org/10.1037/a0038166. PSC 37 or below high risk, 41 or above low risk (organisational). Status: VERIFIED (abstract).
+- Virtanen 2018 DOI confirmed: https://doi.org/10.5271/sjweh.3712.
+
 **Candidate sources for current gaps (not read; citations to confirm before use):**
 - Role clarity: Schmidt S, Roesler U, Kusserow T, Rau R (2014). Uncertainty in the workplace: examining role ambiguity and role conflict, and their link to depression: a meta-analysis. *European Journal of Work and Organizational Psychology*, 23(1), 91–106. Listed in Niedhammer's supplementary material. Status: TO-CHECK (pooled estimates needed).
 - Sexual harassment, gendered violence, traumatic events at work, remote or isolated work, poor physical environment, low job demands, leadership commitment / psychosocial safety climate: no pooled estimate found in the sources read. Status: GAP. Owner to suggest sources, or these stay judgement weights.
 
 ## Theoretical frameworks
 
-**Job Demand-Control model:** Karasek RA (1979). Job demands, job decision latitude, and mental strain: implications for job redesign. *Administrative Science Quarterly*, 24(2), 285–308. Status: TO-CHECK.
+**Job Demand-Control model:** Karasek RA (1979). Job demands, job decision latitude, and mental strain: implications for job redesign. *Administrative Science Quarterly*, 24(2), 285–308. https://doi.org/10.2307/2392498. Status: VERIFIED (citation, Crossref 2026-10-24).
 
-**Demand-Control-Support (iso-strain):** Johnson JV, Hall EM (1988). Job strain, work place social support, and cardiovascular disease. *American Journal of Public Health*, 78(10), 1336–1342. Status: TO-CHECK.
+**Demand-Control-Support (iso-strain):** Johnson JV, Hall EM (1988). Job strain, work place social support, and cardiovascular disease. *American Journal of Public Health*, 78(10), 1336–1342. https://doi.org/10.2105/ajph.78.10.1336. Status: VERIFIED (citation, Crossref 2026-10-24).
 
-**Effort-Reward Imbalance:** Siegrist J (1996). Adverse health effects of high-effort/low-reward conditions. *Journal of Occupational Health Psychology*, 1(1), 27–41. Status: TO-CHECK.
+**Effort-Reward Imbalance:** Siegrist J (1996). Adverse health effects of high-effort/low-reward conditions. *Journal of Occupational Health Psychology*, 1(1), 27–41. https://doi.org/10.1037/1076-8998.1.1.27. Status: VERIFIED (citation, Crossref 2026-10-24).
+
+Plain-English summaries of the three frameworks on the Resources page are our own, marked draft for owner review.
 
 ## Regulatory and standards guidance
 
@@ -201,15 +238,19 @@ Appendix B: identifying hazards. Appendix C: 16 example hazards with sample cont
 **WorkSafe Victoria.** Psychological health regulations FAQ. https://www.worksafe.vic.gov.au/psychological-health-regulations-frequently-asked-questions
 Victoria's tailored control hierarchy (information, instruction or training can't be the main control), review triggers, consultation and HSR information access, prevention plans not mandatory, workers compensation unaffected. Status: VERIFIED (read 2026-10-23); check against the Regulations before stating section numbers.
 
+**World Health Organization (2022).** WHO guidelines on mental health at work. ISBN 978-92-4-005305-2. https://www.who.int/publications/i/item/9789240053052. Recommendation 1 (universal organisational interventions): conditional, very low-certainty evidence (p. 12). Recommendations 4 and 5 (manager training): strong, moderate certainty. Status: VERIFIED (owner's PDF, 2026-10-24).
+
 **ISO 45003:2021.** Occupational health and safety management: psychological health and safety at work, guidelines for managing psychosocial risks. Status: TO-CHECK.
 
 ## Known limitations to state publicly
 
-- Most underlying studies use self-reported exposures, which can inflate associations.
-- Some estimates may be partly confounded by earlier mental ill health.
-- Pooled estimates describe population-level risk, not risk for any individual.
-- Effects vary by sex and occupation (for example, demands and support had larger effects for men in Stansfeld & Candy).
-- **Estimates differ a lot between reviews.** Job strain ranges from OR 1.14 to 1.82 depending on the review, outcome and methods. Weights depend on which source is used.
-- **Causality is uncertain.** The most recent review (Mikkelsen 2021) concludes it can't say with confidence that any of the exposures causes depressive episodes, because of bias and confounding.
-- **Many hazards have no pooled estimate at all**, including sexual harassment, traumatic events, remote or isolated work, the physical environment and role clarity. Any weight for these is a judgement.
-- Combining factors in the model assumes their effects compound in ways the source studies did not always test directly.
+Shown on the Resources page (`site/js/data/evidence.js`, "limitations"). Updated 2026-10-24 for the per-hazard rating.
+
+- Almost all evidence is observational. Mikkelsen 2021 concludes it can't say with confidence that any exposure causes depression, because of bias and confounding.
+- Most studies use self-reported exposures, which can inflate associations.
+- Pooled estimates describe groups, not risk for any individual.
+- Outcomes and designs differ (symptoms, diagnosed disorders, distress, well-being), so estimates can't be compared to rank hazards. Job strain alone ranges from 1.14 to 1.82 depending on the review.
+- Reviews reuse cohorts, so agreement isn't always independent confirmation.
+- Several hazards have no comparable pooled estimate: low demands, remote or isolated work, physical environment, traumatic events as an exposure. A gap isn't evidence of low risk.
+- The Guide's rating rules (G1 to G5) are judgement and haven't been tested against real workplace assessments.
+- Sources were chosen from those checked during this project, not from a full systematic search.

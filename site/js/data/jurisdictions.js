@@ -11,7 +11,7 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.5.0',
+  version: '0.6.0',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
   currentAsAt: '2026-10-24',
@@ -43,6 +43,7 @@ export const site = {
     { href: '#/risk', label: 'Understanding the risk' },
     { href: '#/investigate', label: 'Investigating' },
     { href: '#/law', label: 'Law and regulators' },
+    { href: '#/resources', label: 'Resources' },
   ],
 
   // The guided path, shown as numbered steps at the top of each guided page.
@@ -83,7 +84,7 @@ export const site = {
     { title: 'Investigating systemic factors', href: '#/investigate', status: 'available', summary: 'What conditions allowed this harm to occur.' },
     { title: 'Controls and review', status: 'coming', summary: 'The hierarchy of controls for psychosocial hazards, and 30/60/90 day reviews.' },
     { title: 'Learn', status: 'coming', summary: 'Glossary, worked scenarios and knowledge checks.' },
-    { title: 'Resources', status: 'coming', summary: 'The research and guidance behind the guide, and how scores are calculated.' },
+    { title: 'Resources', href: '#/resources', status: 'available', summary: 'The research and guidance behind the guide, and how the indicative rating works.' },
   ],
 };
 
