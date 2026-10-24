@@ -2,9 +2,9 @@
 
 Browser-only web guide for Australian HR practitioners and Health and Safety Representatives (HSRs). Walks them through identifying, investigating and controlling psychosocial hazards after an incident or report, gives an indicative risk score, and teaches the concepts along the way. Sister tool to the Psychological Risk Model (https://psychologicalriskmetre.netlify.app/). Plain HTML/CSS/JS, public GitHub repo, Netlify deploys `site/` only. Owner is not a professional developer: explain non-obvious things briefly, keep code simple.
 
-## Current phase: 5 complete (committed and tagged locally), awaiting owner review and "push"
+## Current phase: 5 complete and live, awaiting owner review before 6
 
-**New session? Read `docs/HANDOVER.md` first.** Phases 2 to 4 are pushed, live and released. Phase 5 (indicative rating: per-hazard, no weights, rules in `site/js/data/scoring.js`, method in `docs/scoring-method.md`) is built and tagged locally. Gemini report audited and arbitrated; reader-facing review at `research/assessing-psychosocial-hazards-review.md`. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
+**New session? Read `docs/HANDOVER.md` first.** Phases 2 to 5 are pushed, live and released. Phase 5 (indicative rating: per-hazard, no weights, rules in `site/js/data/scoring.js`, method in `docs/scoring-method.md`) is live. Gemini report audited and arbitrated; reader-facing review at `research/assessing-psychosocial-hazards-review.md`. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
 Guided pages are data files rendered by `js/views/flow.js`; answers live in memory only (`js/lib/state.js`).
 Site structure: `js/app.js` router + shell, `js/views/` one file per page, `js/lib/` helpers, `js/data/` all wording. Use `{dutyHolder}`-style placeholders for jurisdiction terms.
 Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl8/psychosocial-hazards (local folder name differs, that's fine). Push to `main` auto-deploys.
