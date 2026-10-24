@@ -5,8 +5,7 @@ Last updated 2026-10-24. Read this first, then only the files it points to.
 ## Where things stand
 
 - **Built:** Phase 0 (scaffold, pipeline), Phase 1 (shell, jurisdictions, hazard library), design foundations ("Civic"), Phase 2 (triage), Phase 3 (understanding the risk, investigating), Phase 4 (evidence audit), research review (2026-10-24), Phase 5 (indicative rating), Phase 6 (Resources). Site version 0.6.0.
-- **Phase 6 is committed and tagged `phase-6` locally, not pushed.** Waiting for the owner to look at `#/resources` and say "push".
-- **Live site** (https://psychosocialhazards.netlify.app) shows everything through Phase 5. Pushed 2026-10-24: `main`, tag `phase-5`, GitHub Release. Live `#/triage`, `#/risk` (rating tested), `#/investigate` checked: render, no console errors.
+- **Live site** (https://psychosocialhazards.netlify.app) shows everything through Phase 6. Pushed 2026-10-24: `main`, tag `phase-6`, GitHub Release. Live `#/triage`, `#/risk` (rating tested), `#/investigate`, `#/resources` checked: render, no console errors. Pushed 2026-10-24: `main`, tag `phase-5`, GitHub Release. Live `#/triage`, `#/risk` (rating tested), `#/investigate` checked: render, no console errors.
 - Earlier: Pushed 2026-10-23: `main`, tags `phase-2`, `phase-3`, `phase-4`, and GitHub Releases for all three. Live `#/triage`, `#/risk`, `#/investigate` checked: render, no console errors.
 
 ## Waiting on the owner
