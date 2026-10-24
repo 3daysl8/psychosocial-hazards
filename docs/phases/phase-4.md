@@ -81,7 +81,7 @@ After the Gemini report, two AI audits and a ChatGPT arbitration (`research/note
 - **No percentage discount for controls.** Control effectiveness is a rating input with plain-language steps.
 - **Hazards with no pooled evidence are rated like any other.** Missing research isn't evidence of low risk.
 
-Decision 3 (simple labelled judgement rules) still applies, now to the per-hazard rating. Decision 4 is still open.
+Decision 3 (simple labelled judgement rules) still applies, now to the per-hazard rating. **Owner approved 2026-10-24:** Phase 5 may use simple rules for frequency, severity and controls, each labelled as judgement and tied to Code s 4.2 and Appendix C. Decision 4 is still open.
 
 ## Deferred
 
