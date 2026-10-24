@@ -70,6 +70,19 @@ Still to find (needed to close gaps):
 3. **Other score inputs** (frequency, severity, hazards combining, existing controls) have no pooled estimates. Phase 5 will propose simple, labelled judgement rules for them. OK to proceed on that basis?
 4. **The Risk Model itself** (separate project, not changed here): whether to update its on-screen note and scoring later in line with this audit.
 
+### Owner decision, 2026-10-24: per-hazard rating
+
+After the Gemini report, two AI audits and a ChatGPT arbitration (`research/notes/final-audit-arbitration.md`), the owner chose **per-hazard rating** instead of a weighted total. This replaces decisions 1 and 2:
+
+- **No hazard weights.** Option A and Option B are both dropped. No source validates weights for scoring a workplace.
+- **Each selected hazard gets its own indicative rating** from duration/frequency, severity and how well controls are working. This follows the Model Code's risk register (Appendix C, p. 54), which records exactly those things per hazard and uses no formula.
+- **The worst-rated hazard sets the overall result.** No averaging, so one serious hazard can't be hidden by several mild ones.
+- **Hazards that combine are flagged**, not multiplied (Code s 4.2 says consider hazards collectively; Lunen 2023 shows risk rising with the number of hazards).
+- **No percentage discount for controls.** Control effectiveness is a rating input with plain-language steps.
+- **Hazards with no pooled evidence are rated like any other.** Missing research isn't evidence of low risk.
+
+Decision 3 (simple labelled judgement rules) still applies, now to the per-hazard rating. Decision 4 is still open.
+
 ## Deferred
 
 - Any scoring (Phase 5, after review).

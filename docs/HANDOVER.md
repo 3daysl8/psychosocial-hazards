@@ -1,6 +1,6 @@
 # Handover: start here
 
-Last updated 2026-10-23, end of a long session. Read this first, then only the files it points to.
+Last updated 2026-10-24. Read this first, then only the files it points to.
 
 ## Where things stand
 
@@ -10,8 +10,17 @@ Last updated 2026-10-23, end of a long session. Read this first, then only the f
 ## Waiting on the owner
 
 1. ~~Test Phases 2 and 3, then push~~ Done 2026-10-23.
-2. **Answer the four Phase 4 decisions** (end of `docs/phases/phase-4.md`): weight set (Option A Mikkelsen 2021 recommended), how to treat hazards with no evidence (neutral labelled judgement weight recommended), OK to propose judgement rules for frequency/severity/combining/controls, and whether the Risk Model itself should be updated later (separate project).
-3. **Gemini deep research report.** Owner is running `prompts/research/gemini-deep-research-scoring.md` in Gemini. Report will land at `research/notes/gemini-deep-research-report.md`. Verify **every** figure against the cited source (Europe PMC full text API works for open-access papers) before adding to `EVIDENCE_REGISTER.md`. Then propose final weights and score rules for approval.
+2. ~~Answer the four Phase 4 decisions~~ **Decided 2026-10-24: per-hazard rating, no weights.** Each hazard rated on its own (duration/frequency, severity, control effectiveness), worst hazard sets the overall result, combinations flagged not multiplied, no control discounts, no-evidence hazards rated like the rest. Recorded at the end of `docs/phases/phase-4.md` and in `EVIDENCE_REGISTER.md`. Still open: decision 3 (OK the simple judgement rules Phase 5 proposes for the per-hazard rating) and decision 4 (Risk Model update, separate project).
+3. **Gemini report: received, audited twice, arbitrated, done 2026-10-24.**
+   - Raw report: `research/notes/psychosocial_risk_literature_review.md`. Contains an invented SWA quote and 13 of 32 bad references. **Don't publish it.**
+   - Audits: `research/notes/gemini-report-audit.md` (Claude Code, **corrected** after arbitration: Madsen 1.22 is real, "Lunen" not "van Lunen", Fox 2022 is real in Work & Stress, Rugulies 1.68 verified, section 6 superseded) and `research/notes/argon-report-audit.md` (second AI audit; has its own errors, don't use its weights).
+   - Arbitration by ChatGPT: `research/notes/final-audit-arbitration.md` plus `arbitration-reference-register.md`, `arbitration_citation_metadata.json`, `proposed-publication-corrections.md`. Spot-checked 7 rulings against sources, all held. Its "publication" framing assumed the Gemini report would be published; ignore the article-rewrite parts.
+   - **Rewritten review for readers:** `research/assessing-psychosocial-hazards-review.md`. Methods for assessing psychosocial hazards, answer to "how do I make the determination" (SWA Model Code process, Appendix C register), verified findings, recommendations, and AI research lessons. Draft for owner review; candidate Resources item (Phase 6).
+   - The review was audited again (`research/assessing-psychosocial-hazards-review-audit.md`, 14 corrections A1–A14) and revised the same day. Kept model names (owner-supplied) despite A12's advice to go generic; kept the AI-lessons section in the piece (owner asked for it) rather than splitting it out.
+   - Confirmed 2026-10-24: People at Work platform closed 2 Oct 2026 (WorkSafe Qld page); Victoria r 15(3)–(4) limits on information/instruction/training (WorkSafe Vic Compliance Code page).
+   - WHO confirmed 2026-10-24 from owner's PDF (`reference/WHO mental health at work.pdf`, gitignored): Rec 1 conditional, very low certainty (p. 12); Recs 4–5 manager training strong, moderate certainty.
+   - Still not read directly by Claude Code: Fleming's volunteering exception (stated by arbitration and review audit), Sojo author-manuscript values (PDF blocked).
+   - **Not committed yet.** Owner to decide: commit the notes and the review, and whether the raw Gemini report goes in the public repo (recommend not, or only with a header pointing to the audits).
 4. Owner review of draft content: hazard text (`reviewStatus: 'draft'`), triage/risk/investigation wording, severity scale (minor/moderate/serious/severe) and controls scale (nothing/not working/partly/working well), which Phase 5 will build on.
 
 ## When the owner says "push"
@@ -29,7 +38,7 @@ Then load the live site in a browser (agent-browser) and check `#/triage`, `#/ri
 
 ## Next phases (from `docs/brief.md`)
 
-- **5:** indicative risk score and "How this score works" panel, using the approved weights. Score inputs already collected in `site/js/data/risk.js` (ids are fixed: `risk.hazards`, `risk.hazards.<id>.frequency|severity`, `risk.controls.effectiveness`). Replace the `scorePlaceholder` block. Put weights and thresholds in a data file with comments naming their register row. Write `docs/scoring-method.md`.
+- **5:** per-hazard indicative rating and "How this score works" panel (no weights; see the 2026-10-24 decision in `docs/phases/phase-4.md`). Score inputs already collected in `site/js/data/risk.js` (ids are fixed: `risk.hazards`, `risk.hazards.<id>.frequency|severity`, `risk.controls.effectiveness`). Replace the `scorePlaceholder` block. Put the rating rules in a data file, each labelled as judgement and naming the Code section that guides it (s 4.2, Appendix C). Write `docs/scoring-method.md`.
 - **6:** Resources section generated from the register (`site/js/data/evidence.js`).
 - **7:** controls, 30/60/90 review, return to work branch, printable summary (`allAnswers()` in `js/lib/state.js`). Victoria's tailored control hierarchy and review triggers are in `research/notes/worksafe-vic-psychological-health.md`.
 - **8:** education tools (content model in `site/js/data/education.js`), glossary, scenarios, knowledge checks.

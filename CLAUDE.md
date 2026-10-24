@@ -4,7 +4,7 @@ Browser-only web guide for Australian HR practitioners and Health and Safety Rep
 
 ## Current phase: 4 complete, awaiting owner review before 5
 
-**New session? Read `docs/HANDOVER.md` first.** Phases 2 to 4 are pushed, live and released. Phase 5 waits for the four decisions in `docs/phases/phase-4.md` and the Gemini research report. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
+**New session? Read `docs/HANDOVER.md` first.** Phases 2 to 4 are pushed, live and released. Phase 5 approach decided 2026-10-24: per-hazard rating, no weights (end of `docs/phases/phase-4.md`). Gemini report audited and arbitrated; reader-facing review at `research/assessing-psychosocial-hazards-review.md`. Licence: MIT code + CC BY 4.0 content. Design: `docs/design.md`.
 Guided pages are data files rendered by `js/views/flow.js`; answers live in memory only (`js/lib/state.js`).
 Site structure: `js/app.js` router + shell, `js/views/` one file per page, `js/lib/` helpers, `js/data/` all wording. Use `{dutyHolder}`-style placeholders for jurisdiction terms.
 Live: https://psychosocialhazards.netlify.app · Repo: https://github.com/3daysl8/psychosocial-hazards (local folder name differs, that's fine). Push to `main` auto-deploys.

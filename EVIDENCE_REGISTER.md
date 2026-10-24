@@ -6,6 +6,8 @@ Status key: `VERIFIED` (checked against the original source, page or table noted
 
 Phase 4 audit completed 2026-10-23. Full report: `docs/phases/phase-4.md`. The weights below are **proposals for the owner's review**; nothing in either tool has been changed.
 
+**2026-10-24: the Guide will not use weights.** The owner chose per-hazard rating (decision in `docs/phases/phase-4.md`). The weight tables below stay as the record of the Risk Model audit and as research context; they don't feed the Guide's score. Figures from the Gemini report enter this register only if marked VERIFIED in `research/notes/gemini-report-audit.md` (as corrected) and re-cited from the original.
+
 ## How weights are derived
 
 Pooled effect sizes (odds ratios or relative risks for a mental health outcome) are converted to log scale, `ln(OR)`, then scaled so the largest effect in the set equals 1.0. Record the raw estimate, its 95% confidence interval, the outcome, and the quality rating. Where a tool uses a factor with no pooled estimate, mark it `GAP` and record the reasoning for the weight chosen, so it's visible as a judgement call rather than presented as evidence.

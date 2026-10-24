@@ -27,3 +27,6 @@ scratch/
 *.tmp
 *.bak
 *~
+
+# Raw Gemini report: contains an invented SWA quote; kept local only (see research/notes/gemini-report-audit.md)
+research/notes/psychosocial_risk_literature_review.md

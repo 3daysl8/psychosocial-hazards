@@ -1,0 +1,1759 @@
+{
+  "checked_date": "2026-10-24",
+  "records": [
+    {
+      "queried_doi": "10.1186/1471-2458-12-38",
+      "status": "resolved",
+      "doi": "10.1186/1471-2458-12-38",
+      "title": [
+        "Mortality and causes of death among violent offenders and victims-a Swedish population based longitudinal study"
+      ],
+      "authors": [
+        "Marlene Stenbacka",
+        "Tomas Moberg",
+        "Anders Romelsjö",
+        "Jussi Jokinen"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "12",
+      "issue": "1",
+      "page": null,
+      "article_number": "38",
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            1,
+            17
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2012,
+                1,
+                17
+              ]
+            ],
+            "date-time": "2012-01-17T00:00:00Z",
+            "timestamp": 1326758400000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "url": "https://doi.org/10.1186/1471-2458-12-38"
+    },
+    {
+      "queried_doi": "10.1093/eurpub/ckad118",
+      "status": "resolved",
+      "doi": "10.1093/eurpub/ckad118",
+      "title": [
+        "Exploring exposure to multiple psychosocial work factors: prospective associations with depression and sickness absence"
+      ],
+      "authors": [
+        "Jonas Christian Lunen",
+        "Reiner Rugulies",
+        "Jeppe K Sørensen",
+        "Lars L Andersen",
+        "Thomas Clausen"
+      ],
+      "journal": [
+        "European Journal of Public Health"
+      ],
+      "volume": "33",
+      "issue": "5",
+      "page": "821-827",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            8,
+            2
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2023,
+                8,
+                3
+              ]
+            ],
+            "date-time": "2023-08-03T00:00:00Z",
+            "timestamp": 1691020800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 1,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1093/eurpub/ckad118"
+    },
+    {
+      "queried_doi": "10.1186/s12889-024-19304-0",
+      "status": "resolved",
+      "doi": "10.1186/s12889-024-19304-0",
+      "title": [
+        "Gender-based violence and harassment at work and health and occupational outcomes. A systematic review of prospective studies"
+      ],
+      "authors": [
+        "Katrina J. Blindow",
+        "Emma Cedstrand",
+        "Devy L. Elling",
+        "Malin Hagland",
+        "Theo Bodin"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "24",
+      "issue": "1",
+      "page": null,
+      "article_number": "1788",
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            4
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                4
+              ]
+            ],
+            "date-time": "2024-07-04T00:00:00Z",
+            "timestamp": 1720051200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                7,
+                4
+              ]
+            ],
+            "date-time": "2024-07-04T00:00:00Z",
+            "timestamp": 1720051200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "url": "https://doi.org/10.1186/s12889-024-19304-0"
+    },
+    {
+      "queried_doi": "10.1037//0022-006x.68.5.748",
+      "status": "resolved",
+      "doi": "10.1037/0022-006x.68.5.748",
+      "title": [
+        "Meta-analysis of risk factors for posttraumatic stress disorder in trauma-exposed adults."
+      ],
+      "authors": [
+        "Chris R. Brewin",
+        "Bernice Andrews",
+        "John D. Valentine"
+      ],
+      "journal": [
+        "Journal of Consulting and Clinical Psychology"
+      ],
+      "volume": "68",
+      "issue": "5",
+      "page": "748-766",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            10
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/0022-006x.68.5.748"
+    },
+    {
+      "queried_doi": "10.1002/jclp.22028",
+      "status": "resolved",
+      "doi": "10.1002/jclp.22028",
+      "title": [
+        "Personality Pathology Factors Predict Recurrent Major Depressive Disorder in Emerging Adults"
+      ],
+      "authors": [
+        "Erin S. Sheets",
+        "Laramie E. Duncan",
+        "Andri S. Bjornsson",
+        "Linda W. Craighead",
+        "W. Edward Craighead"
+      ],
+      "journal": [
+        "Journal of Clinical Psychology"
+      ],
+      "volume": "70",
+      "issue": "6",
+      "page": "536-545",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2013,
+            7,
+            12
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2013,
+                7,
+                12
+              ]
+            ],
+            "date-time": "2013-07-12T00:00:00Z",
+            "timestamp": 1373587200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "url": "https://doi.org/10.1002/jclp.22028"
+    },
+    {
+      "queried_doi": "10.1037/a0017920",
+      "status": "resolved",
+      "doi": "10.1037/a0017920",
+      "title": [
+        "Hierarchy and Its Discontents"
+      ],
+      "authors": [
+        "Keith Oatley",
+        "Thomas Scheff"
+      ],
+      "journal": [
+        "PsycCRITIQUES"
+      ],
+      "volume": "54",
+      "issue": "50",
+      "page": null,
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2009
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/a0017920"
+    },
+    {
+      "queried_doi": "10.1080/02678373.2012.734031",
+      "status": "unresolved",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "queried_doi": "10.1136/oemed-2020-106544",
+      "status": "unresolved",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "queried_doi": "10.3390/ijerph15071358",
+      "status": "resolved",
+      "doi": "10.3390/ijerph15071358",
+      "title": [
+        "A Physiologically-Based Pharmacokinetic Modeling Approach Using Biomonitoring Data in Order to Assess the Contribution of Drinking Water for the Achievement of an Optimal Fluoride Dose for Dental Health in Children"
+      ],
+      "authors": [
+        "Keven J. Jean",
+        "Nancy Wassef",
+        "Fabien Gagnon",
+        "Mathieu Valcke"
+      ],
+      "journal": [
+        "International Journal of Environmental Research and Public Health"
+      ],
+      "volume": "15",
+      "issue": "7",
+      "page": "1358",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            6,
+            28
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2018,
+                6,
+                28
+              ]
+            ],
+            "date-time": "2018-06-28T00:00:00Z",
+            "timestamp": 1530144000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.3390/ijerph15071358"
+    },
+    {
+      "queried_doi": "10.1111/irj.12418",
+      "status": "resolved",
+      "doi": "10.1111/irj.12418",
+      "title": [
+        "Employee well‐being outcomes from individual‐level mental health interventions: Cross‐sectional evidence from the United Kingdom"
+      ],
+      "authors": [
+        "William J. Fleming"
+      ],
+      "journal": [
+        "Industrial Relations Journal"
+      ],
+      "volume": "55",
+      "issue": "2",
+      "page": "162-182",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            10
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                1,
+                10
+              ]
+            ],
+            "date-time": "2024-01-10T00:00:00Z",
+            "timestamp": 1704844800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1111/irj.12418"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3776",
+      "status": "unresolved",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "queried_doi": "10.1186/1471-2458-7-221",
+      "status": "resolved",
+      "doi": "10.1186/1471-2458-7-221",
+      "title": [
+        "Child and adolescent psychiatric patients and later criminality"
+      ],
+      "authors": [
+        "Ulf Engqvist",
+        "Per-Anders Rydelius"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "7",
+      "issue": "1",
+      "page": null,
+      "article_number": "221",
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            8,
+            29
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                29
+              ]
+            ],
+            "date-time": "2007-08-29T00:00:00Z",
+            "timestamp": 1188345600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/2.0"
+        }
+      ],
+      "url": "https://doi.org/10.1186/1471-2458-7-221"
+    },
+    {
+      "queried_doi": "10.1186/s12889-026-28220-4",
+      "status": "resolved",
+      "doi": "10.1186/s12889-026-28220-4",
+      "title": [
+        "Teleworking and its impact on health and well-being: a systematic review of longitudinal studies considering the psychosocial work environment (2005–2024)"
+      ],
+      "authors": [
+        "Annick Parent-Lamarche",
+        "Nancy Beauregard",
+        "Marie-Ève Blanc",
+        "Nathalie Cadieux",
+        "Julie Dextras-Gauthier",
+        "Marie-Colombe Afota",
+        "Wassila Merkouche",
+        "Salima Hamouche",
+        "Oussama R’biaa",
+        "Jessica Garneau"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "26",
+      "issue": "1",
+      "page": null,
+      "article_number": "2717",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            7,
+            7
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                7
+              ]
+            ],
+            "date-time": "2026-07-07T00:00:00Z",
+            "timestamp": 1783382400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T00:00:00Z",
+            "timestamp": 1790726400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 85,
+          "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+        }
+      ],
+      "url": "https://doi.org/10.1186/s12889-026-28220-4"
+    },
+    {
+      "queried_doi": "10.1016/S2215-0366(17)30408-3",
+      "status": "unresolved",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "queried_doi": "10.1136/bmj.m2984",
+      "status": "resolved",
+      "doi": "10.1136/bmj.m2984",
+      "title": [
+        "Work related sexual harassment and risk of suicide and suicide attempts: prospective cohort study"
+      ],
+      "authors": [
+        "Linda L Magnusson Hanson",
+        "Anna Nyberg",
+        "Ellenor Mittendorfer-Rutz",
+        "Fredrik Bondestam",
+        "Ida E H Madsen"
+      ],
+      "journal": [
+        "BMJ"
+      ],
+      "volume": null,
+      "issue": null,
+      "page": "m2984",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            2
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                9,
+                2
+              ]
+            ],
+            "date-time": "2020-09-02T00:00:00Z",
+            "timestamp": 1599004800000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by-nc/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1136/bmj.m2984"
+    },
+    {
+      "queried_doi": "10.1007/s10654-021-00725-9",
+      "status": "resolved",
+      "doi": "10.1007/s10654-021-00725-9",
+      "title": [
+        "Are depressive disorders caused by psychosocial stressors at work? A systematic review with metaanalysis"
+      ],
+      "authors": [
+        "Sigurd Mikkelsen",
+        "David Coggon",
+        "Johan Hviid Andersen",
+        "Patricia Casey",
+        "Esben Meulengracht Flachs",
+        "Henrik Albert Kolstad",
+        "Ole Mors",
+        "Jens Peter Bonde"
+      ],
+      "journal": [
+        "European Journal of Epidemiology"
+      ],
+      "volume": "36",
+      "issue": "5",
+      "page": "479-496",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            12
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                2,
+                12
+              ]
+            ],
+            "date-time": "2021-02-12T00:00:00Z",
+            "timestamp": 1613088000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                2,
+                12
+              ]
+            ],
+            "date-time": "2021-02-12T00:00:00Z",
+            "timestamp": 1613088000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "url": "https://doi.org/10.1007/s10654-021-00725-9"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3968",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3968",
+      "title": [
+        "Psychosocial work exposures and health outcomes: a meta-review of 72 literature reviews with meta-analysis"
+      ],
+      "authors": [
+        "Isabelle Niedhammer",
+        "Sandrine Bertrais",
+        "Katrina Witt"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "47",
+      "issue": "7",
+      "page": "489-508",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            27
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3968"
+    },
+    {
+      "queried_doi": "10.1080/02678373.2012.734709",
+      "status": "resolved",
+      "doi": "10.1080/02678373.2012.734709",
+      "title": [
+        "Outcomes of exposure to workplace bullying: A meta-analytic review"
+      ],
+      "authors": [
+        "Morten Birkeland Nielsen",
+        "Ståle Einarsen"
+      ],
+      "journal": [
+        "Work &amp; Stress"
+      ],
+      "volume": "26",
+      "issue": "4",
+      "page": "309-332",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            10
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1080/02678373.2012.734709"
+    },
+    {
+      "queried_doi": "10.1037/0033-2909.129.1.52",
+      "status": "resolved",
+      "doi": "10.1037/0033-2909.129.1.52",
+      "title": [
+        "Predictors of posttraumatic stress disorder and symptoms in adults: A meta-analysis."
+      ],
+      "authors": [
+        "Emily J. Ozer",
+        "Suzanne R. Best",
+        "Tami L. Lipsey",
+        "Daniel S. Weiss"
+      ],
+      "journal": [
+        "Psychological Bulletin"
+      ],
+      "volume": "129",
+      "issue": "1",
+      "page": "52-73",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2003
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/0033-2909.129.1.52"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3797",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3797",
+      "title": [
+        "Precarious employment and mental health: a systematic review and meta-analysis of longitudinal\n                    studies"
+      ],
+      "authors": [
+        "Torkel Rönnblad",
+        "Erik Grönholm",
+        "Johanna Jonsson",
+        "Isa Koranyi",
+        "Cecilia Orellana",
+        "Bertina Kreshpaj",
+        "Lingjing Chen",
+        "Leo Stockfelt",
+        "Theo Bodin"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "45",
+      "issue": "5",
+      "page": "429-443",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            1,
+            25
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3797"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3877",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3877",
+      "title": [
+        "Work-related exposure to violence or threats and risk of mental disorders and symptoms: a systematic\n                    review and meta-analysis"
+      ],
+      "authors": [
+        "Laura A Rudkjoebing",
+        "Ane Berger Bungum",
+        "Esben Meulengracht Flachs",
+        "Nanna Hurwitz Eller",
+        "Marianne Borritz",
+        "Birgit Aust",
+        "Reiner Rugulies",
+        "Naja Hulvej Rod",
+        "Karin Biering",
+        "Jens Peter Bonde"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "46",
+      "issue": "4",
+      "page": "339-349",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            1,
+            7
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3877"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3632",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3632",
+      "title": [
+        "Effort–reward imbalance at work and risk of depressive disorders. A systematic review and\n                    meta-analysis of prospective cohort studies"
+      ],
+      "authors": [
+        "Reiner Rugulies",
+        "Birgit Aust",
+        "Ida EH Madsen"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "43",
+      "issue": "4",
+      "page": "294-306",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            3,
+            17
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3632"
+    },
+    {
+      "queried_doi": "10.1080/1359432X.2012.711523",
+      "status": "resolved",
+      "doi": "10.1080/1359432x.2012.711523",
+      "title": [
+        "Uncertainty in the workplace: Examining role ambiguity and role conflict, and their link to depression—a meta-analysis"
+      ],
+      "authors": [
+        "Susanne Schmidt",
+        "Ulrike Roesler",
+        "Talin Kusserow",
+        "Renate Rau"
+      ],
+      "journal": [
+        "European Journal of Work and Organizational Psychology"
+      ],
+      "volume": "23",
+      "issue": "1",
+      "page": "91-106",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            8,
+            29
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1080/1359432x.2012.711523"
+    },
+    {
+      "queried_doi": "10.1177/0361684315599346",
+      "status": "resolved",
+      "doi": "10.1177/0361684315599346",
+      "title": [
+        "Harmful Workplace Experiences and Women’s Occupational Well-Being"
+      ],
+      "authors": [
+        "Victor E. Sojo",
+        "Robert E. Wood",
+        "Anna E. Genat"
+      ],
+      "journal": [
+        "Psychology of Women Quarterly"
+      ],
+      "volume": "40",
+      "issue": "1",
+      "page": "10-40",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            8,
+            27
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                8,
+                27
+              ]
+            ],
+            "date-time": "2015-08-27T00:00:00Z",
+            "timestamp": 1440633600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "url": "https://doi.org/10.1177/0361684315599346"
+    },
+    {
+      "queried_doi": "10.1186/s12889-021-10894-7",
+      "status": "resolved",
+      "doi": "10.1186/s12889-021-10894-7",
+      "title": [
+        "How are social stressors at work related to well-being and health? A systematic review and meta-analysis"
+      ],
+      "authors": [
+        "Christin Gerhardt",
+        "Norbert K. Semmer",
+        "Sabine Sauter",
+        "Alexandra Walker",
+        "Nathal de Wijn",
+        "Wolfgang Kälin",
+        "Maria U. Kottwitz",
+        "Bernd Kersten",
+        "Benjamin Ulrich",
+        "Achim Elfering"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "21",
+      "issue": "1",
+      "page": null,
+      "article_number": "890",
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            10
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                10
+              ]
+            ],
+            "date-time": "2021-05-10T00:00:00Z",
+            "timestamp": 1620604800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                5,
+                10
+              ]
+            ],
+            "date-time": "2021-05-10T00:00:00Z",
+            "timestamp": 1620604800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "url": "https://doi.org/10.1186/s12889-021-10894-7"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.1053",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.1053",
+      "title": [
+        "Recovery as an explanatory mechanism in the relation between acute stress reactions and chronic health impairment"
+      ],
+      "authors": [
+        "Sabine AE Geurts",
+        "Sabine Sonnentag"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "32",
+      "issue": "6",
+      "page": "482-492",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2006,
+            12
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.1053"
+    },
+    {
+      "queried_doi": "10.1186/s12889-015-1954-4",
+      "status": "resolved",
+      "doi": "10.1186/s12889-015-1954-4",
+      "title": [
+        "A systematic review including meta-analysis of work environment and depressive symptoms"
+      ],
+      "authors": [
+        "Töres Theorell",
+        "Anne Hammarström",
+        "Gunnar Aronsson",
+        "Lil Träskman Bendz",
+        "Tom Grape",
+        "Christer Hogstedt",
+        "Ina Marteinsdottir",
+        "Ingmar Skoog",
+        "Charlotte Hall"
+      ],
+      "journal": [
+        "BMC Public Health"
+      ],
+      "volume": "15",
+      "issue": "1",
+      "page": null,
+      "article_number": "738",
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            8,
+            1
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2015-08-01T00:00:00Z",
+            "timestamp": 1438387200000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "url": "https://doi.org/10.1186/s12889-015-1954-4"
+    },
+    {
+      "queried_doi": "10.1136/bmjopen-2019-034849",
+      "status": "resolved",
+      "doi": "10.1136/bmjopen-2019-034849",
+      "title": [
+        "Work-related psychosocial risk factors for stress-related mental disorders: an updated systematic review and meta-analysis"
+      ],
+      "authors": [
+        "Henk F van der Molen",
+        "Karen Nieuwenhuijsen",
+        "Monique H W Frings-Dresen",
+        "Gerda de Groene"
+      ],
+      "journal": [
+        "BMJ Open"
+      ],
+      "volume": "10",
+      "issue": "7",
+      "page": "e034849",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            7
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                7,
+                3
+              ]
+            ],
+            "date-time": "2020-07-03T00:00:00Z",
+            "timestamp": 1593734400000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 2,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1136/bmjopen-2019-034849"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3712",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3712",
+      "title": [
+        "Long working hours and depressive symptoms: systematic review and meta-analysis of published studies\n                    and unpublished individual participant data"
+      ],
+      "authors": [
+        "Marianna Virtanen",
+        "Markus Jokela",
+        "Ida EH Madsen",
+        "Linda L Magnusson Hanson",
+        "Tea Lallukka",
+        "Solja T Nyberg",
+        "Lars Alfredsson",
+        "G David Batty",
+        "Jakob B Bjorner",
+        "Marianne Borritz",
+        "Hermann Burr",
+        "Nico Dragano",
+        "Raimund Erbel",
+        "Jane E Ferrie",
+        "Katriina Heikkilä",
+        "Anders Knutsson",
+        "Markku Koskenvuo",
+        "Eero Lahelma",
+        "Martin L Nielsen",
+        "Tuula Oksanen",
+        "Jan H Pejtersen",
+        "Jaana Pentti",
+        "Ossi Rahkonen",
+        "Reiner Rugulies",
+        "Paula Salo",
+        "Jürgen Schupp",
+        "Martin J Shipley",
+        "Johannes Siegrist",
+        "Archana Singh-Manoux",
+        "Sakari B Suominen",
+        "Töres Theorell",
+        "Jussi Vahtera",
+        "Gert G Wagner",
+        "Jian Li Wang",
+        "Vasoontara Yiengprugsawan",
+        "Hugo Westerlund",
+        "Mika Kivimäki"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "44",
+      "issue": "3",
+      "page": "239-250",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            2,
+            8
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3712"
+    },
+    {
+      "queried_doi": "10.1111/j.1744-6570.2007.00067.x",
+      "status": "resolved",
+      "doi": "10.1111/j.1744-6570.2007.00067.x",
+      "title": [
+        "A META‐ANALYSIS OF THE ANTECEDENTS AND CONSEQUENCES OF WORKPLACE SEXUAL HARASSMENT"
+      ],
+      "authors": [
+        "CHELSEA R. WILLNESS",
+        "PIERS STEEL",
+        "KIBEOM LEE"
+      ],
+      "journal": [
+        "Personnel Psychology"
+      ],
+      "volume": "60",
+      "issue": "1",
+      "page": "127-162",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            2,
+            22
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2007,
+                2,
+                22
+              ]
+            ],
+            "date-time": "2007-02-22T00:00:00Z",
+            "timestamp": 1172102400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "url": "https://doi.org/10.1111/j.1744-6570.2007.00067.x"
+    },
+    {
+      "queried_doi": "10.1136/oemed-2011-100381",
+      "status": "resolved",
+      "doi": "10.1136/oemed-2011-100381",
+      "title": [
+        "Impact of organisational change on mental health: a systematic review"
+      ],
+      "authors": [
+        "Simon Grandjean Bamberger",
+        "Anker Lund Vinding",
+        "Anelia Larsen",
+        "Peter Nielsen",
+        "Kirsten Fonager",
+        "René Nesgaard Nielsen",
+        "Pia Ryom",
+        "Øyvind Omland"
+      ],
+      "journal": [
+        "Occupational and Environmental Medicine"
+      ],
+      "volume": "69",
+      "issue": "8",
+      "page": "592-598",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            4,
+            27
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1136/oemed-2011-100381"
+    },
+    {
+      "queried_doi": "10.1037/0022-006X.68.5.748",
+      "status": "resolved",
+      "doi": "10.1037/0022-006x.68.5.748",
+      "title": [
+        "Meta-analysis of risk factors for posttraumatic stress disorder in trauma-exposed adults."
+      ],
+      "authors": [
+        "Chris R. Brewin",
+        "Bernice Andrews",
+        "John D. Valentine"
+      ],
+      "journal": [
+        "Journal of Consulting and Clinical Psychology"
+      ],
+      "volume": "68",
+      "issue": "5",
+      "page": "748-766",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            10
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/0022-006x.68.5.748"
+    },
+    {
+      "queried_doi": "10.1037/a0033798",
+      "status": "resolved",
+      "doi": "10.1037/a0033798",
+      "title": [
+        "A meta-analysis of the relationship between job burnout and secondary traumatic stress among workers with indirect exposure to trauma."
+      ],
+      "authors": [
+        "Roman Cieslak",
+        "Kotaro Shoji",
+        "Allison Douglas",
+        "Erin Melville",
+        "Aleksandra Luszczynska",
+        "Charles C. Benight"
+      ],
+      "journal": [
+        "Psychological Services"
+      ],
+      "volume": "11",
+      "issue": "1",
+      "page": "75-86",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            2
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/a0033798"
+    },
+    {
+      "queried_doi": "10.1348/096317909X470690",
+      "status": "resolved",
+      "doi": "10.1348/096317909x470690",
+      "title": [
+        "Psychosocial safety climate as a precursor to conducive work environments, psychological health problems, and employee engagement"
+      ],
+      "authors": [
+        "Maureen F. Dollard",
+        "Arnold B. Bakker"
+      ],
+      "journal": [
+        "Journal of Occupational and Organizational Psychology"
+      ],
+      "volume": "83",
+      "issue": "3",
+      "page": "579-599",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2010,
+            9
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2010,
+                12,
+                24
+              ]
+            ],
+            "date-time": "2010-12-24T00:00:00Z",
+            "timestamp": 1293148800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 114,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "url": "https://doi.org/10.1348/096317909x470690"
+    },
+    {
+      "queried_doi": "10.1016/j.aap.2011.09.042",
+      "status": "resolved",
+      "doi": "10.1016/j.aap.2011.09.042",
+      "title": [
+        "Psychosocial safety climate moderates the job demand–resource interaction in predicting workgroup distress"
+      ],
+      "authors": [
+        "Maureen F. Dollard",
+        "Michelle R. Tuckey",
+        "Christian Dormann"
+      ],
+      "journal": [
+        "Accident Analysis &amp; Prevention"
+      ],
+      "volume": "45",
+      "issue": null,
+      "page": "694-704",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            3
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2012,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2012-03-01T00:00:00Z",
+            "timestamp": 1330560000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1016/j.aap.2011.09.042"
+    },
+    {
+      "queried_doi": "10.1037/a0038166",
+      "status": "resolved",
+      "doi": "10.1037/a0038166",
+      "title": [
+        "A national standard for psychosocial safety climate (PSC): PSC 41 as the benchmark for low risk of job strain and depressive symptoms."
+      ],
+      "authors": [
+        "Tessa S. Bailey",
+        "Maureen F. Dollard",
+        "Penny A. M. Richards"
+      ],
+      "journal": [
+        "Journal of Occupational Health Psychology"
+      ],
+      "volume": "20",
+      "issue": "1",
+      "page": "15-26",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2015
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1037/a0038166"
+    },
+    {
+      "queried_doi": "10.1001/jamapsychiatry.2020.0322",
+      "status": "resolved",
+      "doi": "10.1001/jamapsychiatry.2020.0322",
+      "title": [
+        "Psychosocial Stressors at Work and the Risk of Sickness Absence Due to a Diagnosed Mental Disorder"
+      ],
+      "authors": [
+        "Caroline S. Duchaine",
+        "Karine Aubé",
+        "Mahée Gilbert-Ouimet",
+        "Michel Vézina",
+        "Ruth Ndjaboué",
+        "Victoria Massamba",
+        "Denis Talbot",
+        "Mathilde Lavigne-Robichaud",
+        "Xavier Trudel",
+        "Ana-Paula Bruno Pena-Gralle",
+        "Alain Lesage",
+        "Lynne Moore",
+        "Alain Milot",
+        "Danielle Laurin",
+        "Chantal Brisson"
+      ],
+      "journal": [
+        "JAMA Psychiatry"
+      ],
+      "volume": "77",
+      "issue": "8",
+      "page": "842",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            8,
+            1
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1001/jamapsychiatry.2020.0322"
+    },
+    {
+      "queried_doi": "10.3390/ijerph16214134",
+      "status": "resolved",
+      "doi": "10.3390/ijerph16214134",
+      "title": [
+        "Road Traffic Noise Exposure and Depression/Anxiety: An Updated Systematic Review and Meta-Analysis"
+      ],
+      "authors": [
+        "Angel M. Dzhambov",
+        "Peter Lercher"
+      ],
+      "journal": [
+        "International Journal of Environmental Research and Public Health"
+      ],
+      "volume": "16",
+      "issue": "21",
+      "page": "4134",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            27
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                10,
+                27
+              ]
+            ],
+            "date-time": "2019-10-27T00:00:00Z",
+            "timestamp": 1572134400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.3390/ijerph16214134"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.3777",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.3777",
+      "title": [
+        "Organizational change and employee mental health: A prospective multilevel study of the associations\n                    between organizational changes and clinically relevant mental distress"
+      ],
+      "authors": [
+        "Lise Fløvik",
+        "Stein Knardahl",
+        "Jan Olav Christensen"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "45",
+      "issue": "2",
+      "page": "134-145",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            10,
+            18
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.3777"
+    },
+    {
+      "queried_doi": "10.1179/oeh.2007.13.3.268",
+      "status": "resolved",
+      "doi": "10.1179/oeh.2007.13.3.268",
+      "title": [
+        "A Systematic Review of the Job-stress Intervention Evaluation Literature, 1990–2005"
+      ],
+      "authors": [
+        "Anthony D. Lamontagne",
+        "Tessa Keegel",
+        "Amber M. Louie",
+        "Aleck Ostry",
+        "Paul A. Landsbergis"
+      ],
+      "journal": [
+        "International Journal of Occupational and Environmental Health"
+      ],
+      "volume": "13",
+      "issue": "3",
+      "page": "268-280",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            7
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.1179/oeh.2007.13.3.268"
+    },
+    {
+      "queried_doi": "10.1017/S003329171600355X",
+      "status": "resolved",
+      "doi": "10.1017/s003329171600355x",
+      "title": [
+        "Job strain as a risk factor for clinical depression: systematic review and meta-analysis with additional individual participant data"
+      ],
+      "authors": [
+        "I. E. H. Madsen",
+        "S. T. Nyberg",
+        "L. L. Magnusson Hanson",
+        "J. E. Ferrie",
+        "K. Ahola",
+        "L. Alfredsson",
+        "G. D. Batty",
+        "J. B. Bjorner",
+        "M. Borritz",
+        "H. Burr",
+        "J.-F. Chastang",
+        "R. de Graaf",
+        "N. Dragano",
+        "M. Hamer",
+        "M. Jokela",
+        "A. Knutsson",
+        "M. Koskenvuo",
+        "A. Koskinen",
+        "C. Leineweber",
+        "I. Niedhammer",
+        "M. L. Nielsen",
+        "M. Nordin",
+        "T. Oksanen",
+        "J. H. Pejtersen",
+        "J. Pentti",
+        "I. Plaisier",
+        "P. Salo",
+        "A. Singh-Manoux",
+        "S. Suominen",
+        "M. ten Have",
+        "T. Theorell",
+        "S. Toppinen-Tanner",
+        "J. Vahtera",
+        "A. Väänänen",
+        "P. J. M. Westerholm",
+        "H. Westerlund",
+        "E. I. Fransson",
+        "K. Heikkilä",
+        "M. Virtanen",
+        "R. Rugulies",
+        "M. Kivimäki",
+        ""
+      ],
+      "journal": [
+        "Psychological Medicine"
+      ],
+      "volume": "47",
+      "issue": "8",
+      "page": "1342-1356",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            1,
+            26
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                1,
+                26
+              ]
+            ],
+            "date-time": "2017-01-26T00:00:00Z",
+            "timestamp": 1485388800000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1017/s003329171600355x"
+    },
+    {
+      "queried_doi": "10.5271/sjweh.1050",
+      "status": "resolved",
+      "doi": "10.5271/sjweh.1050",
+      "title": [
+        "Psychosocial work environment and mental health—a meta-analytic review"
+      ],
+      "authors": [
+        "Stephen Stansfeld",
+        "Bridget Candy"
+      ],
+      "journal": [
+        "Scandinavian Journal of Work, Environment &amp; Health"
+      ],
+      "volume": "32",
+      "issue": "6",
+      "page": "443-462",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2006,
+            12
+          ]
+        ]
+      },
+      "license": null,
+      "url": "https://doi.org/10.5271/sjweh.1050"
+    },
+    {
+      "queried_doi": "10.1371/journal.pone.0135225",
+      "status": "resolved",
+      "doi": "10.1371/journal.pone.0135225",
+      "title": [
+        "Workplace Bullying and Mental Health: A Meta-Analysis on Cross-Sectional and Longitudinal Data"
+      ],
+      "authors": [
+        "Bart Verkuil",
+        "Serpil Atasayi",
+        "Marc L. Molendijk"
+      ],
+      "journal": [
+        "PLOS ONE"
+      ],
+      "volume": "10",
+      "issue": "8",
+      "page": "e0135225",
+      "article_number": null,
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            8,
+            25
+          ]
+        ]
+      },
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                8,
+                25
+              ]
+            ],
+            "date-time": "2015-08-25T00:00:00Z",
+            "timestamp": 1440460800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "url": "https://doi.org/10.1371/journal.pone.0135225"
+    }
+  ]
+}
