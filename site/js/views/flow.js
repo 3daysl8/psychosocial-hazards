@@ -9,6 +9,8 @@ import { verifyNote, roleCallouts, sourceItem } from '../lib/components.js';
 import { getAnswer, setAnswer, onAnswer, clearAnswers, hasAnswers } from '../lib/state.js';
 import { listedHazards } from './hazards.js';
 import { supportContacts, flowText } from '../data/flow.js';
+import { bands, startingBand, scoreText } from '../data/scoring.js';
+import { scoreHazards } from '../lib/score.js';
 
 const inputId = key => `f-${key.replace(/[^\w-]/g, '-')}`;
 
@@ -137,7 +139,7 @@ const blockRenderers = {
     ];
   },
 
-  // One frequency and severity question per hazard picked in the hazardPicker block.
+  // One frequency, severity and (optional) controls question per hazard picked in the hazardPicker block.
   hazardExposure: (block, ctx) => {
     const holder = el('div', { class: 'exposure', 'aria-live': 'polite' });
     const draw = () => {
@@ -153,7 +155,8 @@ const blockRenderers = {
           el('h3', {}, hazard.name),
           el('div', { class: 'exposure-choices' },
             choice({ key: `${block.hazardsKey}.${hazard.id}.frequency`, label: block.frequency.label }, ctx, block.frequency.options, 'compact'),
-            choice({ key: `${block.hazardsKey}.${hazard.id}.severity`, label: block.severity.label }, ctx, block.severity.options, 'compact')))),
+            choice({ key: `${block.hazardsKey}.${hazard.id}.severity`, label: block.severity.label }, ctx, block.severity.options, 'compact'),
+            block.controls ? choice({ key: `${block.hazardsKey}.${hazard.id}.controls`, label: block.controls.label, hint: block.controls.hint }, ctx, block.controls.options, 'compact') : null))),
       );
     };
     draw();
@@ -161,12 +164,83 @@ const blockRenderers = {
     return holder;
   },
 
-  scorePlaceholder: (block, ctx) => el('section', { class: 'score-panel', 'aria-labelledby': 'score-title' },
-    el('p', { class: 'score-tag' }, 'Indicative'),
-    el('h3', { id: 'score-title' }, ctx.fill(block.title)),
-    paragraphs(block.paragraphs, ctx),
-    el('p', {}, externalLink(ctx.site.riskModelUrl, block.riskModelLink))),
+  // The indicative rating. Redraws whenever any answer changes. Rules: data/scoring.js; arithmetic: lib/score.js.
+  score: (block, ctx) => {
+    const holder = el('div', { class: 'score-holder', 'aria-live': 'polite' });
+    const view = { howOpen: false }; // keeps "How this score works" open while the score redraws
+    const draw = () => {
+      const picked = new Set(getAnswer(block.hazardsKey, []));
+      const hazards = listedHazards(ctx).filter(hazard => picked.has(hazard.id));
+      holder.replaceChildren(scorePanel(scoreHazards(hazards, block.hazardsKey, block.controlsKey), hazards.length, block, ctx, view));
+    };
+    draw();
+    onAnswer('*', draw);
+    return holder;
+  },
 };
+
+// Short form of an option's label for tables: its `short` text, or the part before the colon.
+const optionLabel = (options, id) => {
+  const option = options.find(item => item.id === id);
+  return option ? option.short || option.label.split(':')[0] : '–';
+};
+const bandLabel = id => bands.find(band => band.id === id)?.label;
+
+function scorePanel(result, pickedCount, block, ctx, view) {
+  const t = scoreText;
+  const overall = bandLabel(result.overall);
+  let status = null;
+  if (!pickedCount) status = t.needHazards;
+  else if (!result.overall) status = t.needAnswers;
+  else if (result.unrated) status = t.partly;
+
+  return el('section', { class: 'score-panel', 'aria-labelledby': 'score-title' },
+    el('p', { class: 'score-tag' }, t.tag),
+    el('h3', { id: 'score-title' }, el('span', { class: 'score-label' }, `${t.overallLabel}: `), overall || t.noneYet),
+    el('ol', { class: 'band-scale', 'aria-label': t.bandScaleLabel }, bands.map(band =>
+      el('li', { 'aria-current': band.id === result.overall ? 'true' : null }, band.label))),
+    status ? el('p', { class: 'score-status' }, status) : null,
+    result.overall ? el('p', {}, t.drivenBy.replace('{hazards}', result.drivers.map(hazard => hazard.name).join(', '))) : null,
+    result.combineFlag ? el('p', { class: 'combine-count' }, t.combine.replace('{count}', result.combineFlag)) : null,
+    result.rows.length ? scoreTable(result.rows, block) : null,
+    result.rows.some(row => row.usedDefault) ? el('p', { class: 'field-note' }, t.controlsDefault) : null,
+    el('p', { class: 'key-point' }, t.dutyReminder),
+    el('p', {}, t.cantTell),
+    howItWorks(block, ctx, view));
+}
+
+function scoreTable(rows, block) {
+  const t = scoreText;
+  return el('div', { class: 'table-scroll' },
+    el('table', { class: 'score-table' },
+      el('caption', {}, t.tableCaption),
+      el('thead', {}, el('tr', {}, t.columns.map(column => el('th', { scope: 'col' }, column)))),
+      el('tbody', {}, rows.map(row => el('tr', {},
+        el('th', { scope: 'row' }, row.hazard.name),
+        el('td', {}, row.frequency ? optionLabel(block.frequency.options, row.frequency) : '–'),
+        el('td', {}, row.severity ? optionLabel(block.severity.options, row.severity) : '–'),
+        el('td', {}, row.controls ? optionLabel(block.controls.options, row.controls) + (row.usedDefault ? t.overallSuffix : '') : t.controlsNotRated),
+        el('td', { class: 'score-band' }, bandLabel(row.band) || t.noneYet))))));
+}
+
+function howItWorks(block, ctx, view) {
+  const how = scoreText.how;
+  const frequencies = block.frequency.options;
+  return el('details', { class: 'learn-more', open: view.howOpen, ontoggle: event => { view.howOpen = event.target.open; } },
+    el('summary', {}, how.summary),
+    how.paragraphs.map(text => el('p', {}, text)),
+    el('div', { class: 'table-scroll' },
+      el('table', { class: 'score-table' },
+        el('caption', {}, how.matrixCaption),
+        el('thead', {}, el('tr', {}, el('td'), frequencies.map(option => el('th', { scope: 'col' }, optionLabel(frequencies, option.id))))),
+        el('tbody', {}, block.severity.options.map(severity => el('tr', {},
+          el('th', { scope: 'row' }, optionLabel(block.severity.options, severity.id)),
+          frequencies.map(option => el('td', {}, bandLabel(startingBand[severity.id][option.id])))))))),
+    el('h4', {}, how.controlsTitle),
+    el('ul', {}, how.controlsRules.map(text => el('li', {}, text))),
+    el('p', {}, how.combineRule),
+    el('p', {}, externalLink(ctx.site.repoUrl + how.methodPath, how.methodLink)));
+}
 
 function renderBlocks(blocks, ctx) {
   return blocks.flatMap(block => {

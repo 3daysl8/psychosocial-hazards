@@ -14,11 +14,11 @@ export function setAnswer(key, value) {
   if (empty) answers.delete(key);
   else answers.set(key, value);
   for (const listener of listeners) {
-    if (listener.key === key) listener.fn(value);
+    if (listener.key === key || listener.key === '*') listener.fn(value, key);
   }
 }
 
-// Run fn whenever the answer for key changes. Listeners are cleared each time a page renders.
+// Run fn whenever the answer for key changes ('*' for any answer). Listeners are cleared each time a page renders.
 export function onAnswer(key, fn) {
   listeners.push({ key, fn });
 }

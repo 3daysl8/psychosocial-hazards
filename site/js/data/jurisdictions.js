@@ -11,10 +11,10 @@
 export const site = {
   title: 'Psychosocial Hazard Investigation Guide',
   tagline: 'A free guide for HR practitioners and Health and Safety Representatives in Australia on identifying, investigating and controlling psychosocial hazards.',
-  version: '0.4.0',
+  version: '0.5.0',
 
   // Shown on every page as "Content current as at ...". Update this one line when content is reviewed.
-  currentAsAt: '2026-10-23',
+  currentAsAt: '2026-10-24',
 
   disclaimer:
     'This guide is for education and to support good practice. It is not legal advice and does not determine legal outcomes. ' +
@@ -79,7 +79,7 @@ export const site = {
   sections: [
     { title: 'Hazard library', href: '#/hazards', status: 'available', summary: 'The common psychosocial hazards listed for your jurisdiction, with examples and early warning signs.' },
     { title: 'Something\'s happened', href: '#/triage', status: 'available', summary: 'Immediate safety and support, the notifiable incident check, and which processes run side by side.' },
-    { title: 'Understanding the risk', href: '#/risk', status: 'available', summary: 'Gathering objective information, consulting workers and HSRs, and an indicative risk score.' },
+    { title: 'Understanding the risk', href: '#/risk', status: 'available', summary: 'Gathering objective information, consulting workers and HSRs, and an indicative risk rating for each hazard.' },
     { title: 'Investigating systemic factors', href: '#/investigate', status: 'available', summary: 'What conditions allowed this harm to occur.' },
     { title: 'Controls and review', status: 'coming', summary: 'The hierarchy of controls for psychosocial hazards, and 30/60/90 day reviews.' },
     { title: 'Learn', status: 'coming', summary: 'Glossary, worked scenarios and knowledge checks.' },

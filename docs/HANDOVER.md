@@ -4,7 +4,8 @@ Last updated 2026-10-24. Read this first, then only the files it points to.
 
 ## Where things stand
 
-- **Built:** Phase 0 (scaffold, pipeline), Phase 1 (shell, jurisdictions, hazard library), design foundations ("Civic"), Phase 2 (triage), Phase 3 (understanding the risk, investigating), Phase 4 (evidence audit). Site version 0.4.0.
+- **Built:** Phase 0 (scaffold, pipeline), Phase 1 (shell, jurisdictions, hazard library), design foundations ("Civic"), Phase 2 (triage), Phase 3 (understanding the risk, investigating), Phase 4 (evidence audit), research review (2026-10-24), Phase 5 (indicative rating). Site version 0.5.0.
+- **Phase 5 is committed and tagged `phase-5` locally, not pushed.** Waiting for the owner to test `#/risk` and say "push" (then push `main` and the tag, check the deploy, create the GitHub Release).
 - **Live site** (https://psychosocialhazards.netlify.app) shows everything through Phase 4. Pushed 2026-10-23: `main`, tags `phase-2`, `phase-3`, `phase-4`, and GitHub Releases for all three. Live `#/triage`, `#/risk`, `#/investigate` checked: render, no console errors.
 
 ## Waiting on the owner
@@ -28,17 +29,17 @@ Last updated 2026-10-24. Read this first, then only the files it points to.
 ```bash
 cd /c/dev/psychological-hazards
 git push origin main
-git push origin phase-2 phase-3 phase-4
+git push origin phase-5
 # wait for Netlify to deploy the latest commit:
 H=$(git rev-parse --short=7 HEAD)
 until netlify api listSiteDeploys --data '{"site_id":"5144a2de-4861-4f94-a0fb-070a831970e7"}' | python -c "import json,sys;d=json.load(sys.stdin)[0];r=(d.get('commit_ref') or '')[:7];print(d['state'],r);sys.exit(0 if r=='$H' and d['state'] in ('ready','error') else 1)"; do sleep 5; done
 ```
 
-Then load the live site in a browser (agent-browser) and check `#/triage`, `#/risk`, `#/investigate` render with no console errors under the live CSP. Then `gh release create phase-2|phase-3|phase-4` with notes from `BUILD_LOG.md`, linking `docs/phases/phase-N.md` and `prompts/phase-N.md` at the tag (see the phase-1 release for the format, ending with the Claude Code attribution line).
+Then load the live site in a browser (agent-browser) and check `#/triage`, `#/risk` (fill a hazard and see the rating), `#/investigate` render with no console errors under the live CSP. Then `gh release create phase-5` with notes from `BUILD_LOG.md`, linking `docs/phases/phase-N.md` and `prompts/phase-N.md` at the tag (see the phase-1 release for the format, ending with the Claude Code attribution line).
 
 ## Next phases (from `docs/brief.md`)
 
-- **5:** per-hazard indicative rating and "How this score works" panel (no weights; see the 2026-10-24 decision in `docs/phases/phase-4.md`). Score inputs already collected in `site/js/data/risk.js` (ids are fixed: `risk.hazards`, `risk.hazards.<id>.frequency|severity`, `risk.controls.effectiveness`). Replace the `scorePlaceholder` block. Put the rating rules in a data file, each labelled as judgement and naming the Code section that guides it (s 4.2, Appendix C). Write `docs/scoring-method.md`.
+- ~~**5:** indicative rating~~ Built 2026-10-24 (`docs/phases/phase-5.md`). Rules: `site/js/data/scoring.js` (register rows G1 to G5); method: `docs/scoring-method.md`. Per-hazard answer keys: `risk.hazards.<id>.frequency|severity|controls`; overall controls `risk.controls.effectiveness` is the fallback.
 - **6:** Resources section generated from the register (`site/js/data/evidence.js`).
 - **7:** controls, 30/60/90 review, return to work branch, printable summary (`allAnswers()` in `js/lib/state.js`). Victoria's tailored control hierarchy and review triggers are in `research/notes/worksafe-vic-psychological-health.md`.
 - **8:** education tools (content model in `site/js/data/education.js`), glossary, scenarios, knowledge checks.

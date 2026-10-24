@@ -77,7 +77,7 @@ textarea { border-radius: var(--radius); width: 100%; }
 
 
 @media (max-width: 60rem) {
-  .layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .book-nav { position: static; padding: 1rem; }
   .nav-list { display: flex; flex-wrap: wrap; }
 }
@@ -226,3 +226,15 @@ button.button:hover { background: var(--panel); }
 .field-wide { display: flex; flex-direction: column; gap: 0.3rem; }
 .field-wide label { font-weight: 700; font-size: 1.05rem; }
 .field-wide .hint { margin: 0; }
+
+/* Indicative risk rating (Phase 5) */
+.score-panel h3 .score-label { font-size: 1rem; font-weight: 600; color: var(--muted); display: block; }
+.score-status { font-weight: 600; }
+.score-panel .combine-count { background: var(--bg); }
+.score-panel h4 { margin: 1.2rem 0 0.3rem; }
+.table-scroll { overflow-x: auto; margin: 1rem 0; }
+.score-table { width: 100%; border-collapse: collapse; background: var(--bg); border-radius: var(--radius); font-size: 0.9rem; }
+.score-table caption { text-align: left; font-weight: 700; padding: 0 0 0.4rem; }
+.score-table th, .score-table td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--line); }
+.score-table thead th { font-size: 0.8rem; color: var(--muted); }
+.score-table .score-band { font-weight: 700; }

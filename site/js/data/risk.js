@@ -1,9 +1,9 @@
-// "Understanding the risk" (Phase 3). Ends where the indicative score will go (Phase 5).
+// "Understanding the risk" (Phases 3 and 5). Ends with the indicative risk rating.
 // DRAFT content for the owner's review. Block types are described in js/views/flow.js.
 // Answer keys start with "risk." and are held in memory only (js/lib/state.js).
 //
-// The exposure and controls options below are what the Phase 5 score will read.
-// Keep their ids stable: the scoring weights will refer to them.
+// The exposure and controls options below are what the indicative rating reads (js/data/scoring.js).
+// Keep their ids stable: the rating rules refer to them.
 
 export const exposureFrequency = {
   label: 'How often, and for how long?',
@@ -25,10 +25,10 @@ export const exposureSeverity = {
 };
 
 export const controlsEffectiveness = [
-  { id: 'none', label: 'Nothing is in place' },
-  { id: 'failing', label: 'In place, but not working' },
-  { id: 'partial', label: 'Partly working' },
-  { id: 'working', label: 'Working well, as far as you can tell' },
+  { id: 'none', label: 'Nothing is in place', short: 'Nothing in place' },
+  { id: 'failing', label: 'In place, but not working', short: 'Not working' },
+  { id: 'partial', label: 'Partly working', short: 'Partly working' },
+  { id: 'working', label: 'Working well, as far as you can tell', short: 'Working well' },
 ];
 
 export const riskPage = {
@@ -36,7 +36,7 @@ export const riskPage = {
   href: '#/risk',
   title: 'Understanding the risk',
   intro: [
-    'Build a picture of the risk from three things: objective information, what workers and others have said, and consultation. This section ends with an indicative risk score.',
+    'Build a picture of the risk from three things: objective information, what workers and others have said, and consultation. This section ends with an indicative risk rating for each hazard.',
   ],
   sections: [
     {
@@ -67,6 +67,11 @@ export const riskPage = {
           hazardsKey: 'risk.hazards',
           frequency: exposureFrequency,
           severity: exposureSeverity,
+          controls: {
+            label: 'How well are current controls working for this hazard?',
+            hint: 'Optional. If you skip it, your answer under "Controls already in place" is used.',
+            options: controlsEffectiveness,
+          },
           emptyText: 'Select hazards above to rate them here.',
           combineText: 'You\'ve selected {count} hazards. When hazards combine, the risk is usually greater than any one of them alone.',
         },
@@ -180,7 +185,7 @@ export const riskPage = {
       title: 'Controls already in place',
       blocks: [
         { type: 'text', key: 'risk.controls.list', label: 'What\'s already being done?', hint: 'For example rosters, supervision, staffing, training, policies or support services.' },
-        { type: 'choice', key: 'risk.controls.effectiveness', label: 'How well are they working?', options: controlsEffectiveness },
+        { type: 'choice', key: 'risk.controls.effectiveness', label: 'How well are they working overall?', hint: 'Used in the rating for any hazard where you haven\'t answered the controls question above.', options: controlsEffectiveness },
         {
           type: 'learnMore',
           summary: 'Why EAP and counselling don\'t count as controlling the risk',
@@ -205,15 +210,15 @@ export const riskPage = {
     },
     {
       id: 'score',
-      title: 'Indicative risk score',
+      title: 'Indicative risk rating',
       blocks: [
         {
-          type: 'scorePlaceholder',
-          title: 'Not available yet',
-          paragraphs: [
-            'The indicative score will appear here once the research behind its weights has been checked (build Phase 5). It will use the hazards, exposure, severity and existing controls you\'ve entered above. Individual circumstances will not affect it.',
-          ],
-          riskModelLink: 'Meanwhile, the Psychological Risk Model shows how work factors combine.',
+          type: 'score',
+          hazardsKey: 'risk.hazards',
+          controlsKey: 'risk.controls.effectiveness',
+          frequency: exposureFrequency,
+          severity: exposureSeverity,
+          controls: { options: controlsEffectiveness },
         },
       ],
     },

@@ -2,7 +2,7 @@
 
 This file records the research and guidance behind every scored factor, weight and claim in the Psychological Risk Model and the Psychosocial Hazard Investigation Guide. Anyone reusing these tools should be able to trace a number on screen back to a source here.
 
-Status key: `VERIFIED` (checked against the original source, page or table noted), `TO-CHECK` (source identified, figures not yet extracted or confirmed), `GAP` (factor used in a tool with no supporting source yet).
+Status key: `VERIFIED` (checked against the original source, page or table noted), `TO-CHECK` (source identified, figures not yet extracted or confirmed), `GAP` (factor used in a tool with no supporting source yet). `JUDGEMENT` (a rule chosen by the owner, guided by the named source but not derived from research figures).
 
 Phase 4 audit completed 2026-10-23. Full report: `docs/phases/phase-4.md`. The weights below are **proposals for the owner's review**; nothing in either tool has been changed.
 
@@ -69,6 +69,18 @@ CMD = common mental disorders. Option A outcome is always depressive episodes.
 4. **Bundled factors.** "High demands with low control" is one measured exposure (job strain), which is fine. "Bullying, harassment or conflict" bundles three different hazards; only bullying has an estimate. Propose splitting.
 5. **Pillar, cascade and band values are unsourced.** Keep them only if labelled as design judgements, or drop the pillar structure.
 6. **The on-screen claim about meta-analytic weights** should be changed to match the code, or the code changed to match the claim.
+
+## Guide rating rules (Phase 5)
+
+The Guide's indicative rating uses no weights. Every rule is `JUDGEMENT`, guided by the Model Code's assessment questions and risk register. Full method: `docs/scoring-method.md`. Code: `site/js/data/scoring.js` (each rule's comment names its row here).
+
+| Row | Rule | Status | Guided by |
+|---|---|---|---|
+| G1 | Starting rating from severity × how often (4 × 3 table); a severe one-off starts at High | JUDGEMENT | SWA Model Code s 4.2 (duration, frequency, severity; one severe exposure can harm), p. 23; Appendix C risk register, p. 54 |
+| G2 | Controls: none or not working +1 band; partly 0; working well −1 band; no percentage discounts | JUDGEMENT | Code s 5.1 (controls ordered by effectiveness; administrative controls least reliable), pp. 24–25; Appendix C "How effective are the current controls?". No source supports the Gemini report's 10/25/60% discounts. |
+| G3 | Working controls can't take a severe hazard below Moderate | JUDGEMENT | Code s 4.2 (severe single exposures); review recommendation "act on a serious hazard on its own merits" |
+| G4 | Flag when 2+ hazards rated Moderate or above; flag never changes a rating | JUDGEMENT | Code s 4.2 (consider hazards collectively), p. 23; Lunen et al. 2023, Eur J Public Health 33(5):821–827, doi 10.1093/eurpub/ckad118 (odds of probable depression rise with number of exposures; VERIFIED, Table 3). No interaction multiplier. |
+| G5 | Overall = highest single hazard rating; nothing averaged | JUDGEMENT | Owner decision 2026-10-24 (`docs/phases/phase-4.md`); arbitration M7 (dividing by a total dilutes a serious single hazard) |
 
 ## Guide hazards mapped to evidence (for Phase 5)
 
